@@ -1,0 +1,220 @@
+﻿@import "./constants.less";
+@import "./variables.less";
+
+body {
+}
+
+@brand-info: #99c339;
+@brand-primary: #ff6600;
+@hilight: #e7e6fa;
+@label-hilight: #4d4d80;
+
+.screen-header {
+    .screen-title {
+        top: 0px;
+        padding-left: 18px;
+    }
+}
+
+.header-row {
+    background-color: @hilight;
+}
+
+.commands-menu {
+    color:#aaaaaa;
+}
+
+.commands-menu:hover {
+    color:white;
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.nav-tabs {
+    border-bottom-color: @key-color;
+    border-bottom-width: 2px;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:active {
+    background-color: @clear-color;
+    border-color: @key-color;
+    border-bottom-color: @clear-color;
+    border-top: 3px solid @brand-info;
+}
+
+.nav-tabs > li.active {
+    margin-bottom: -2px;
+}
+
+.panel {
+    > .panel-heading {
+        //background-color: #4d4d80;
+        background-color: @key-color;
+        color: #ffffff;
+    }
+
+    > .panel-heading[data-toggle] {
+        cursor: pointer;
+
+        .glyphicon {
+            color: #ffffff;
+        }
+
+        &:hover {
+            background-color: lighten(@key-color, 5);
+        }
+    }
+}
+
+.panel-body {
+    .datalist.row {
+        margin-left: 0px;
+    }
+
+    .datalist {
+        background-color: @clear-color;
+        padding: @default-margin;
+        .col-xs-12.datalist-item {
+            margin: @default-margin;
+            box-shadow:rgba(128, 128, 128, 0.54902) 2px 2px 6px 3px;
+        }
+
+        .col-xs-12.datalist-item.selected {
+            background-color: lighten(@brand-primary, 45);
+        }
+        padding-right: 18px;
+    }
+}
+
+a {
+    color: @key-color;
+    &:hover {
+        color: lighten(@key-color, 10);
+    }
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover,
+.nav > li > a:active {
+    background-color: @hilight;
+}
+
+.panel-title-center {
+    text-align:center;
+}
+
+.btn-info {
+    background-color: @brand-info;
+    &:hover {
+        background-color: lighten(@brand-info, 10);
+    }
+
+    &:focus {
+        background-color: lighten(@brand-info, 10);
+    }
+    &:active {
+        background-color: darken(@brand-info, 10);
+    }
+}
+
+.btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
+    background-color: darken(@brand-info, 10);
+}
+
+.btn-primary {
+    background-color: @brand-primary;
+
+   &:hover {
+       background-color: lighten(@brand-primary, 10);
+   }
+
+   &:focus {
+       background-color: lighten(@brand-primary, 10);
+   }
+}
+
+.tab-pane {
+    padding: @default-double-margin;
+}
+
+.item-label {
+    display: inline-block;
+    background-color: #4d4d80;
+    //border-radius: @border-radius-large;
+    padding: @default-half-margin @default-margin @default-half-margin @default-margin;
+    font-weight: normal;
+    color: @clear-color;
+    font-size: 12px;
+    min-width: 90px;
+    text-align: center;
+}
+
+.item-label.recommended {
+    background-color: lighten(@brand-primary, 10);
+}
+
+.item-label.private {
+    background-color: #999999;
+}
+
+.btn-xs, .btn-sm, .btn-md {
+    font-size: @font-size-base;
+}
+
+.modal {
+    .modal-header {
+        background-color: #4d4d80;
+        color: @clear-color;
+        .close, .close:hover, .close:focus {
+            color: @clear-color;
+        }
+    }
+
+    .panel {
+        > .panel-heading {
+            background-color: @key-color;
+            color: #ffffff;
+        }
+    }
+
+    .modal-footer .btn {
+        min-width: 100px;
+    }
+}
+
+.message-area {
+    .info-message {
+        background-color: @hilight;
+
+        ul {
+
+            pre:hover {
+                background-color: @hilight;
+            }
+        }
+    }
+}
+
+.breadcrumb {
+    margin-top: 6px;
+}
+
+.small-font {
+    font-size: @font-size-base - 4px;
+}
+
+.screen-commands {
+    box-shadow: 0 2px 2px 0 rgba(32,32,32,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.detail-command {
+    text-align: center;
+}
+
+.btn-next-search {
+    margin: 5px 0px 5px 0px;
+    min-width: 150px;
+}

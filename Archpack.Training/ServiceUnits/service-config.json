@@ -1,0 +1,145 @@
+﻿{
+  "authProviders": [
+    "db",
+    "azuread",
+    "ad"
+
+  ],
+  "availableRoles": [
+    "Admin",
+    "Users",
+    "Anonymous"
+  ],
+  "connectionStrings": {
+    "Authorization": {
+        "connectionString": "Data Source=.\\SQLEXPRESS;Initial Catalog=Authorization;Integrated Security=True; MultipleActiveResultSets=True"
+            
+    },
+    "ActosDbAuth": {
+      "connectionString": "DATA SOURCE=arcsdb.archway.co.jp:1521/arcsdb;PASSWORD=archway;USER ID=ARCSADM_ACTOSSPIKE",
+      "providerName": "Oracle.ManagedDataAccess.Client",
+      "defaultScheme": "ARCSADM_ACTOSSPIKE"
+    },
+    "EmployeeInformationEntities": {
+      "connectionString": "DATA SOURCE=arcsdb.archway.co.jp:1521/arcsdb;PASSWORD=archway;USER ID=ARCSADM_ACTOSSPIKE",
+      "providerName": "Oracle.ManagedDataAccess.Client",
+      "defaultScheme": "ARCSADM_ACTOSSPIKE"
+    },
+    "ArcsAuditLogEntities": {
+      "connectionString": "DATA SOURCE=arcsdb.archway.co.jp:1521/arcsdb;PASSWORD=archway;USER ID=ARCSADM_ACTOSSPIKE",
+      "providerName": "Oracle.ManagedDataAccess.Client",
+      "defaultScheme": "ARCSADM_ACTOSSPIKE"
+    }
+  },
+  "appSettings": {
+    "pdfServiceUrl": "https://customer.archway.co.jp/pdf/Service/PdfServiceEx.asmx",
+    "pdfMaxSize": 10485760,
+    "redirectSourcePage": false,
+    "smtpHost": "",
+    "smtpPort": 0,
+    "employeeInfoQueryDir": "ServiceUnits/Actos/V1/",
+    "employeeInfoTargetDomains": [ "archwaytest.local", "inte.co.jp", "exe.inte.co.jp", "intelligence.local", "awt.local" ]
+  },
+  "authDomain": "ARCHWAY",
+  "azureAdSettings": {
+    "clientId": "34136063-1a12-4cde-b1aa-88fbb033b487",
+    "aadInstance": "https://login.microsoftonline.com/{0}",
+    "tenant": "c68ee234-2c70-4bb4-b824-641e97394d0d",
+    "postLogoutRedirectUri": "http://localhost:3034/",
+    "appKey": "7AwDaWZ71trpgNdKKLP4b9t/jsH6tY4RyW82+ebijqE=",
+    "resourceId": "https://archway.co.jp/ArchPack",
+    "graphResourceId": "https://graph.windows.net"
+  },
+  "loginPage": "~/Shared/V2/Anonymous/page/Login",
+  "defaultPage": "~/Trainings/V1/Users/page/SearchList",
+  "errorPages": {
+    "500": {
+      "redirectMode": "Rewrite",
+      "url": "~/ServiceUnits/Shared/V2/Anonymous/Pages/500.aspx"
+    },
+    "404": {
+      "redirectMode": "Rewrite",
+      "url": "~/ServiceUnits/Shared/V2/Anonymous/Pages/404.aspx",
+      "redirectUrl": "~/"
+    },
+    "403": {
+      "redirectMode": "Rewrite",
+      "url": "~/ServiceUnits/Shared/V2/Anonymous/Pages/403.aspx",
+      "redirectUrl": "~/"
+    },
+    "401": {
+      "redirectMode": "Rewrite",
+      "url": "~/ServiceUnits/Shared/V2/Anonymous/Pages/401.aspx",
+      "redirectUrl": "~/"
+    }
+  },
+  "smtpMail": {
+    "smtpServer": "localhost",
+    "smtpPort": 25,
+    "sendType": "File",
+    "fileOutputDir": "~/log/mail",
+    "fixAddresses": []
+  },
+  "logSettings": [
+    {
+      "uri": "/",
+      "resource": {
+        "type": "file",
+        "filename": "${basedir}/log/debug-${shortdate}.log",
+        "name": "debug",
+        "level": "debug",
+        "format": "[${longdate}][${event-context:item=logid}][${level:uppercase=true}] User:${event-context:item=user} Uri:${event-context:item=uri} ${message} ${exception:format=tostring}",
+        "connection": ""
+      }
+    },
+    {
+      "uri": "/",
+      "resource": {
+        "type": "file",
+        "filename": "${basedir}/log/trace-${shortdate}.log",
+        "name": "trace",
+        "level": "trace",
+        "format": "[${longdate}][${event-context:item=logid}][${level:uppercase=true}] User:${event-context:item=user} Uri:${event-context:item=uri} ${message} ${exception:format=tostring}",
+        "connection": ""
+      }
+    },
+    {
+      "uri": "/",
+      "resource": {
+        "type": "file",
+        "filename": "${basedir}/log/audit-${shortdate}.log",
+        "name": "audit",
+        "level": "info",
+        "format": "[${longdate}][${event-context:item=logid}][${level:uppercase=true}] User:${event-context:item=user} Uri:${event-context:item=uri} ${message}",
+        "connection": ""
+      }
+    },
+    {
+      "uri": "/",
+      "resource": {
+        "type": "file",
+        "filename": "${basedir}/log/error-${shortdate}.log",
+        "name": "error",
+        "level": "error",
+        "format": "[${longdate}][${event-context:item=logid}][${level:uppercase=true}] User:${event-context:item=user} Uri:${event-context:item=uri} ${message} ${exception:format=tostring}",
+        "connection": ""
+      }
+    },
+    {
+      "uri": "/",
+      "resource": {
+        "type": "ArcsAudit",
+        "name": "ArcsAudit",
+        "level": "trace",
+        "connection": "Provider=OraOLEDB.Oracle;DATA SOURCE=arcsdb.archway.co.jp:1521/arcsdb;PASSWORD=archway;USER ID=ARCSADM_UT;OLEDB.NET=True;"
+      }
+    }
+  ],
+  "roleBasedAuthorization": {
+    "ignoreUrls": [
+      "/Membership/V1",
+      "/Shared/V2",
+      "/Trainings/V1"
+    ]
+  }
+}

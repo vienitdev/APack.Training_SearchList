@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+    <assembly>
+        <name>Infragistics45.WebUI.Documents.Word.v14.2</name>
+    </assembly>
+    <members>
+        <member name="T:Infragistics.Documents.Word.AnchorsCollection">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の固定コンテンツを含みます。</summary>
+            <remarks>
+            <p class="body">文書の指定した位置に固定される図を段落に追加するために、<see cref="M:Infragistics.Documents.Word.AnchorsCollection.AddAnchoredPicture(System.Drawing.Image)">AddAnchoredPicture</see> メソッドを使用します。</p>
+            <p class="body">文書の指定した位置に固定される図形を段落に追加するために、<see cref="M:Infragistics.Documents.Word.AnchorsCollection.AddAnchoredShape(Infragistics.Documents.Word.ShapeType)">AddAnchoredShape</see> メソッドを使用します。</p>
+            <p class="body"><see cref="P:Infragistics.Documents.Word.Paragraph.ContentRuns">ContentRuns</see> コレクションを使用して、テキスト、ハイパーリンク、画像、および図形を段落に追加できます。このコレクションに属するコンテンツは、文書内の静的な場所を占有せず、他のコンテンツの追加や削除に応じて位置が変化します。</p>
+            </remarks><seealso cref="T:Infragistics.Documents.Word.ContentRunsCollection">ContentRunsCollection クラス</seealso><seealso cref="P:Infragistics.Documents.Word.Paragraph.ContentRuns">ContentRuns コレクション (Paragraph クラス)</seealso></member>
+        <member name="T:Infragistics.Documents.Word.CollectionBase`1">
+            <summary>コレクションの基本クラス。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.CollectionBase`1.Clear">
+            <summary>このコレクションからすべて要素を削除します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.CollectionBase`1.RemoveAt(System.Int32)">
+            <summary>このコレクション内の指定した順序位置にある項目を削除します。</summary>
+            <param name="index">削除するための項目の順序位置。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.CollectionBase`1.Remove(`0)">
+            <summary>指定した <paramref name="item" /> をこのコレクションから削除します。</summary>
+            <param name="item">削除する項目。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.CollectionBase`1.Add(`0)">
+            <summary>指定した <paramref name="item" /> をこのコレクションに追加します。</summary>
+            <param name="item">追加する項目。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.CollectionBase`1.Insert(System.Int32,`0)">
+            <summary>指定した <paramref name="item" /> を、指定した <paramref name="index" /> でコレクションに挿入します。</summary>
+            <param name="item">追加する項目。</param>
+            <param name="index">項目を追加する順序位置。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.CollectionBase`1.IndexOf(`0)">
+            <summary>このコレクションで指定した <paramref name="item" /> のインデックスを返します。項目がこのコレクションのメンバーではない場合は、-1 を返します。</summary>
+            <param name="item">検索する項目。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.CollectionBase`1.Contains(`0)">
+            <summary>指定した <paramref name="item" /> はこのコレクションに含まれるかどうかを示すブール値を返します。</summary>
+            <param name="item">テストされる項目。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.CollectionBase`1.ToString">
+            <summary>このオブジェクトの文字列表現を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.CollectionBase`1.Item(System.Int32)">
+            <summary>このコレクション内の指定した順序位置にあるオブジェクトを返します。</summary>
+            <param name="index">このコレクション内の項目のゼロから始まる順序位置。</param>
+            <returns>指定された順序位置のオブジェクト。</returns>
+        </member>
+        <member name="P:Infragistics.Documents.Word.CollectionBase`1.Count">
+            <summary>コレクションに含まれる要素の数を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.CollectionBase`1.Document">
+            <summary>このコレクションが関連付けられている <see cref="T:Infragistics.Documents.Word.Document">Document</see> を返します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.AnchorsCollection.AddAnchoredPicture(System.Drawing.Image)">
+            <summary>関連付けられた段落に <see cref="T:Infragistics.Documents.Word.AnchoredPicture">AnchoredPicture</see> を追加します。</summary>
+            <param name="image">図に表示される画像を設定します。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.AnchorsCollection.AddAnchoredPicture(Infragistics.Documents.Word.AnchoredPicture)">
+            <summary>関連付けられた段落に <see cref="T:Infragistics.Documents.Word.AnchoredPicture">AnchoredPicture</see> を追加します。</summary>
+            <param name="anchoredPicture">追加する <see cref="T:Infragistics.Documents.Word.AnchoredPicture">AnchoredPicture</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.AnchorsCollection.InsertAnchoredPicture(System.Int32,System.Drawing.Image)">
+            <summary>関連する段落の指定した順序位置に <see cref="T:Infragistics.Documents.Word.AnchoredPicture">AnchoredPicture</see> を挿入します。</summary>
+            <param name="index">図を挿入するこのコレクションの順序位置。</param>
+            <param name="image">図に表示される画像を設定します。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.AnchorsCollection.InsertAnchoredPicture(System.Int32,Infragistics.Documents.Word.AnchoredPicture)">
+            <summary>関連する段落の指定した順序位置に <see cref="T:Infragistics.Documents.Word.AnchoredPicture">AnchoredPicture</see> を挿入します。</summary>
+            <param name="index">図を挿入するこのコレクションの順序位置。</param>
+            <param name="anchoredPicture">追加する <see cref="T:Infragistics.Documents.Word.AnchoredPicture">AnchoredPicture</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.AnchorsCollection.AddAnchoredShape(Infragistics.Documents.Word.ShapeType)">
+            <summary>関連付けられた段落に <see cref="T:Infragistics.Documents.Word.AnchoredShape">AnchoredShape</see> を追加します。</summary>
+            <param name="shapeType">追加する図形タイプを定義する <see cref="T:Infragistics.Documents.Word.ShapeType">ShapeType</see> 定数 (線、矩形、楕円など)。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.AnchorsCollection.AddAnchoredShape(Infragistics.Documents.Word.VmlShape)">
+            <summary>関連付けられた段落に <see cref="T:Infragistics.Documents.Word.AnchoredShape">AnchoredShape</see> を追加します。</summary>
+            <param name="shape">追加する図形のプロパティを定義する <see cref="T:Infragistics.Documents.Word.VmlShape">VmlShape</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.AnchorsCollection.AddAnchoredShape(Infragistics.Documents.Word.AnchoredShape)">
+            <summary>関連付けられた段落に <see cref="T:Infragistics.Documents.Word.AnchoredShape">AnchoredShape</see> を追加します。</summary>
+            <param name="anchoredShape">追加する <see cref="T:Infragistics.Documents.Word.AnchoredShape">AnchoredShape</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.AnchorsCollection.InsertAnchoredShape(System.Int32,Infragistics.Documents.Word.ShapeType)">
+            <summary>関連する段落の指定した順序位置に <see cref="T:Infragistics.Documents.Word.AnchoredShape">AnchoredShape</see> を挿入します。</summary>
+            <param name="index">図を挿入するこのコレクションの順序位置。</param>
+            <param name="shapeType">追加する図形タイプを定義する <see cref="T:Infragistics.Documents.Word.ShapeType">ShapeType</see> 定数 (線、矩形、楕円など)。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.AnchorsCollection.InsertAnchoredShape(System.Int32,Infragistics.Documents.Word.VmlShape)">
+            <summary>関連する段落の指定した順序位置に <see cref="T:Infragistics.Documents.Word.AnchoredShape">AnchoredShape</see> を挿入します。</summary>
+            <param name="index">図を挿入するこのコレクションの順序位置。</param>
+            <param name="shape">追加する図形のプロパティを定義する <see cref="T:Infragistics.Documents.Word.VmlShape">VmlShape</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.AnchorsCollection.InsertAnchoredShape(System.Int32,Infragistics.Documents.Word.AnchoredShape)">
+            <summary>関連する段落の指定した順序位置に <see cref="T:Infragistics.Documents.Word.AnchoredShape">AnchoredShape</see> を挿入します。</summary>
+            <param name="index">図を挿入するこのコレクションの順序位置。</param>
+            <param name="anchoredShape">追加する図形タイプを定義する <see cref="T:Infragistics.Documents.Word.AnchoredShape">AnchoredShape</see> インスタンス (線、矩形、楕円など)。</param>
+        </member>
+        <member name="T:Infragistics.Documents.Word.ContentBlock">
+            <summary><see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> または <see cref="T:Infragistics.Documents.Word.Table">Table</see> などの <see cref="T:Infragistics.Documents.Word.Document">Document</see> にコンテンツのブロックをカプセル化します。</summary>
+            <remarks>
+            <p class="body">
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentBlock.#ctor(Infragistics.Documents.Word.Document)">
+            <summary>クラスの新しいインスタンスを作成します。</summary>
+            <param name="document">このインスタンスが関連付けられている <see cref="T:Infragistics.Documents.Word.Document">Document</see>。</param>
+        </member>
+        <member name="P:Infragistics.Documents.Word.ContentBlock.Index">
+            <summary>属するコレクション内の項目の順序位置を返します。コレクションに属しない場合は、 -1 を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.ContentBlock.Document">
+            <summary>このインスタンスに関連付けられた <see cref="T:Infragistics.Documents.Word.Document">Document</see> を返します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.ContentBlocksCollection">
+            <summary><see cref="T:Infragistics.Documents.Word.SectionHeader">ヘッダー</see>、または<see cref="T:Infragistics.Documents.Word.SectionFooter">フッター</see>のブロックレベル コンテンツ (<see cref="T:Infragistics.Documents.Word.Paragraph">段落</see>および<see cref="T:Infragistics.Documents.Word.Table">テーブル</see>) を含みます。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentBlocksCollection.AddParagraph">
+            <summary>このコレクションに <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> を追加します。</summary>
+            <returns>追加された <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> への参照。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentBlocksCollection.InsertParagraph(System.Int32)">
+            <summary>このコレクションの指定した順序位置に <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> を挿入します。</summary>
+            <param name="index">段落を挿入するこのコレクションの順序位置。</param>
+            <returns>追加された <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> への参照。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentBlocksCollection.AddTable">
+            <summary>このコレクションに <see cref="T:Infragistics.Documents.Word.Table">Table</see> を追加します。</summary>
+            <returns>追加された <see cref="T:Infragistics.Documents.Word.Table">Table</see> への参照。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentBlocksCollection.InsertTable(System.Int32)">
+            <summary>このコレクションの指定した順序位置に <see cref="T:Infragistics.Documents.Word.Table">Table</see> を挿入します。</summary>
+            <param name="index">段落を挿入するこのコレクションの順序位置。</param>
+            <returns>追加された <see cref="T:Infragistics.Documents.Word.Table">Table</see> への参照。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentBlocksCollection.GetParagraphs">
+            <summary>このコレクションに属する <see cref="T:Infragistics.Documents.Word.Paragraph">段落</see> のみを含む列挙子を返します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentBlocksCollection.GetTables">
+            <summary>このコレクションに属する <see cref="T:Infragistics.Documents.Word.Table">テーブル</see> のみを含む列挙子を返します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.ContentRunsCollection">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> のテキスト、ハイパーリンク、インライン図、インライン図形などのインライン コンテンツを含みます。</summary>
+            <remarks>
+            <p class="body"><see cref="M:Infragistics.Documents.Word.ContentRunsCollection.AddTextRun(System.String)">AddTextRun</see> メソッドによって、テキスト ランを段落に追加できます。</p>
+            <p class="body"><see cref="M:Infragistics.Documents.Word.ContentRunsCollection.AddHyperlink(System.String,System.String)">AddHyperlink</see> メソッドによって、ハイパーリンクを段落に追加できます。</p>
+            <p class="body"><see cref="M:Infragistics.Documents.Word.ContentRunsCollection.AddInlinePicture(System.Drawing.Image)">AddInlinePicture</see> メソッドによって、テキスト コンテンツのインラインに表示する図を段落に追加できます。</p>
+            <p class="body"><see cref="M:Infragistics.Documents.Word.ContentRunsCollection.AddInlineShape(Infragistics.Documents.Word.ShapeType)">AddInlineShape</see> メソッドによって、テキスト コンテンツのインラインに表示する図形を段落に追加できます。</p>
+            <p class="body">インライン コンテンツは、文書内の他のコンテンツの追加または削除に応じて、文書内の位置が動的に変化するコンテンツとして定義されます。ContentRunsCollection クラスは、すべてのそのようなコンテンツのコンテナーです。</p>
+            <p class="body">文書の特定の場所に固定される画像や図形を段落に追加するには、<see cref="P:Infragistics.Documents.Word.Paragraph.Anchors">Anchors</see> メソッドを使用します。</p>
+            </remarks><seealso cref="T:Infragistics.Documents.Word.AnchorsCollection">AnchorsCollection クラス</seealso><seealso cref="P:Infragistics.Documents.Word.Paragraph.Anchors">Anchors コレクション (Paragraph クラス)</seealso></member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddNewLine">
+            <summary>関連する段落に newline を追加します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddNewLine(Infragistics.Documents.Word.NewLineType)">
+            <summary>関連する段落に newline を追加します。</summary>
+            <param name="newLineType">newline 文字が作成された出力で表される方法を決定する <see cref="T:Infragistics.Documents.Word.NewLineType">NewLineType</see> 定数。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddTextRun(System.String)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> を追加します。</summary>
+            <param name="text">追加するテキスト。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddTextRun(System.String,Infragistics.Documents.Word.Font)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> を追加します。</summary>
+            <param name="text">追加するテキスト。</param>
+            <param name="font">結果のテキスト ランの書式属性を定義する <see cref="T:Infragistics.Documents.Word.Font">Font</see> インスタンス。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddTextRun(System.String,Infragistics.Documents.Word.Font,System.Nullable{System.Boolean})">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> を追加します。</summary>
+            <param name="text">追加するテキスト。</param>
+            <param name="font">結果のテキスト ランの書式属性を定義する <see cref="T:Infragistics.Documents.Word.Font">Font</see> インスタンス。</param>
+            <param name="checkSpellingAndGrammar">コンテンツがスペル チェックされたかどうかを指定します。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddTextRun(Infragistics.Documents.Word.TextRun)">
+            <summary>指定した <see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> を追加します。</summary>
+            <param name="textRun">追加する <see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddHyperlink(System.String,System.String)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> を追加します。</summary>
+            <param name="address">ハイパーリンクのアドレス。有効な URI に設定する必要があります。</param>
+            <param name="text">ハイパーリンクに表示されるテキスト。明示的な値がない場合、<paramref name="address" /> は表示されます。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddHyperlink(System.String,System.String,System.String)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> を追加します。</summary>
+            <param name="address">ハイパーリンクのアドレス。有効な URI に設定する必要があります。</param>
+            <param name="text">ハイパーリンクに表示されるテキスト。明示的な値がない場合、<paramref name="address" /> は表示されます。</param>
+            <param name="toolTipText">ユーザーがこのハイパーリンクの上にカーソルでホバーときに表示されるテキスト。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddHyperlink(System.String,System.String,Infragistics.Documents.Word.Font)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> を追加します。</summary>
+            <param name="address">ハイパーリンクのアドレス。有効な URI に設定する必要があります。</param>
+            <param name="text">ハイパーリンクに表示されるテキスト。明示的な値がない場合、<paramref name="address" /> は表示されます。</param>
+            <param name="font">表示されるテキストの書式属性を定義する <see cref="T:Infragistics.Documents.Word.Font">Font</see>。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddHyperlink(System.String,System.String,Infragistics.Documents.Word.Font,System.String)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> を追加します。</summary>
+            <param name="address">ハイパーリンクのアドレス。有効な URI に設定する必要があります。</param>
+            <param name="text">ハイパーリンクに表示されるテキスト。明示的な値がない場合、<paramref name="address" /> は表示されます。</param>
+            <param name="font">表示されるテキストの書式属性を定義する <see cref="T:Infragistics.Documents.Word.Font">Font</see>。</param>
+            <param name="toolTipText">ユーザーがこのハイパーリンクの上にカーソルでホバーときに表示されるテキスト。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddHyperlink(System.String,System.Collections.Generic.IList{Infragistics.Documents.Word.TextRun},System.String)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> を追加します。</summary>
+            <param name="address">ハイパーリンクのアドレス。有効な URI に設定する必要があります。</param>
+            <param name="textRuns">ハイパーリンクのリッチ コンテンツを定義する <see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> インスタンスの一覧。</param>
+            <param name="toolTipText">ユーザーがこのハイパーリンクの上にカーソルでホバーときに表示されるテキスト。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddHyperlink(Infragistics.Documents.Word.TextHyperlink)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に指定した <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> を追加します。</summary>
+            <param name="hyperlink">追加する <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddInlinePicture(System.Drawing.Image)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture</see> を追加します。</summary>
+            <param name="image">追加する行内の図と関連する画像。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddInlinePicture(System.Drawing.Image,System.Nullable{System.Drawing.SizeF})">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture</see> を追加します。</summary>
+            <param name="image">追加する行内の図と関連する画像。</param>
+            <param name="size">表示される図のサイズ。null 値に設定すると、関連する <paramref name="image" /> のデフォルト サイズを使用します。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddInlinePicture(Infragistics.Documents.Word.InlinePicture)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に指定した <see cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture</see> を追加します。</summary>
+            <param name="inlinePicture">追加する <see cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddInlineShape(Infragistics.Documents.Word.ShapeType)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> を追加します。</summary>
+            <param name="shapeType">追加する図形タイプを定義する <see cref="T:Infragistics.Documents.Word.ShapeType">ShapeType</see> 定数 (線、矩形、楕円など)。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddInlineShape(Infragistics.Documents.Word.ShapeType,System.Nullable{System.Drawing.SizeF})">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> を追加します。</summary>
+            <param name="shapeType">追加する図形タイプを定義する <see cref="T:Infragistics.Documents.Word.ShapeType">ShapeType</see> 定数 (線、矩形、楕円など)。</param>
+            <param name="size">図形の表示されるサイズ。明示的な値がない場合は、図形が平方インチのサイズで表示されます。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddInlineShape(Infragistics.Documents.Word.InlineShape)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に指定した <see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> を追加します。</summary>
+            <param name="inlineShape">追加する <see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddInlineShape(Infragistics.Documents.Word.VmlShape)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に指定した <see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> を追加します。</summary>
+            <param name="shape">追加する <see cref="T:Infragistics.Documents.Word.VmlShape">VmlShape</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.AddPageNumberField(Infragistics.Documents.Word.PageNumberFieldFormat)">
+            <summary>関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に <see cref="T:Infragistics.Documents.Word.PageNumberField">PageNumberField</see> を追加します。</summary>
+            <param name="format">ページ番号の書式を定義する <see cref="T:Infragistics.Documents.Word.PageNumberFieldFormat">PageNumberFieldFormat</see> 定数。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.PageNumberField">PageNumberField</see> インスタンス。</returns>
+            <remarks>
+            <p class="body"><b>注: </b>ページ番号フィールドはヘッダーまたはフッターに表示されるコンテンツでのみサポートされます。メイン文書部分に表示されるコンテンツにページ番号フィールドを追加しようとすると例外がスローされます。</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.InsertTextRun(System.Int32,System.String)">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の指定した順序位置に <see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> を挿入します。</summary>
+            <param name="index">テキスト ランを挿入するこのコレクションの順序位置。</param>
+            <param name="text">追加するテキスト。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.InsertTextRun(System.Int32,Infragistics.Documents.Word.TextRun)">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の指定した順序位置に <see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> を挿入します。</summary>
+            <param name="index">テキスト ランを挿入するこのコレクションの順序位置。</param>
+            <param name="textRun">追加する <see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see>。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.InsertHyperlink(System.Int32,System.String)">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の指定した順序位置に <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> を挿入します。</summary>
+            <param name="index">ハイパーリンクを挿入するこのコレクションの順序位置。</param>
+            <param name="address">ハイパーリンクのアドレス。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.InsertHyperlink(System.Int32,System.String,System.String)">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の指定した順序位置に <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> を挿入します。</summary>
+            <param name="index">ハイパーリンクを挿入するこのコレクションの順序位置。</param>
+            <param name="address">ハイパーリンクのアドレス。有効な URI に設定する必要があります。</param>
+            <param name="text">ハイパーリンクに表示されるテキスト。明示的な値がない場合、<paramref name="address" /> は表示されます。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.InsertHyperlink(System.Int32,Infragistics.Documents.Word.TextHyperlink)">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の指定した順序位置に <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> を挿入します。</summary>
+            <param name="index">ハイパーリンクを挿入するこのコレクションの順序位置。</param>
+            <param name="hyperlink">挿入する <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.InsertInlinePicture(System.Int32,System.Drawing.Image)">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の指定した順序位置に <see cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture</see> を挿入します。</summary>
+            <param name="index">図を挿入するこのコレクションの順序位置。</param>
+            <param name="image">追加する行内の図と関連する画像。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.InsertInlinePicture(System.Int32,Infragistics.Documents.Word.InlinePicture)">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の指定した順序位置に <see cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture</see> を挿入します。</summary>
+            <param name="index">図を挿入するこのコレクションの順序位置。</param>
+            <param name="inlinePicture">挿入する <see cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.InsertInlineShape(System.Int32,Infragistics.Documents.Word.ShapeType)">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の指定した順序位置に <see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> を挿入します。</summary>
+            <param name="index">図形を挿入するこのコレクションの順序位置。</param>
+            <param name="shapeType">追加する図形タイプを定義する <see cref="T:Infragistics.Documents.Word.ShapeType">ShapeType</see> 定数 (線、矩形、楕円など)。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> インスタンス。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.InsertInlineShape(System.Int32,Infragistics.Documents.Word.InlineShape)">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の指定した順序位置に <see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> を挿入します。</summary>
+            <param name="index">図形を挿入するこのコレクションの順序位置。</param>
+            <param name="inlineShape">挿入する <see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.InsertPageNumberField(System.Int32,Infragistics.Documents.Word.PageNumberFieldFormat)">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の指定した順序位置に <see cref="T:Infragistics.Documents.Word.PageNumberField">PageNumberField</see> を挿入します。</summary>
+            <param name="index">テキスト ランを挿入するこのコレクションの順序位置。</param>
+            <param name="format">ページ番号の書式を定義する <see cref="T:Infragistics.Documents.Word.PageNumberFieldFormat">PageNumberFieldFormat</see> 定数。</param>
+            <returns><see cref="T:Infragistics.Documents.Word.PageNumberField">PageNumberField</see> インスタンス。</returns>
+            <remarks>
+            <p class="body"><b>注: </b>ページ番号フィールドはヘッダーまたはフッターに表示されるコンテンツでのみサポートされます。メイン文書部分に表示されるコンテンツにページ番号フィールドを追加しようとすると例外がスローされます。</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Documents.Word.ContentRunsCollection.InsertPageNumberField(System.Int32,Infragistics.Documents.Word.PageNumberField)">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の指定した順序位置に指定した <see cref="T:Infragistics.Documents.Word.PageNumberField">PageNumberField</see> を挿入します。</summary>
+            <param name="index">ページ番号フィールドを挿入するこのコレクションの順序位置。</param>
+            <param name="pageNumberField">挿入する <see cref="T:Infragistics.Documents.Word.PageNumberField">PageNumberField</see> インスタンス。</param>
+            <remarks>
+            <p class="body"><b>注: </b>ページ番号フィールドはヘッダーまたはフッターに表示されるコンテンツでのみサポートされます。メイン文書部分に表示されるコンテンツにページ番号フィールドを追加しようとすると例外がスローされます。</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.Documents.Word.Document">
+            <summary>ワード プロセッシング文書をカプセル化します。</summary>
+            <remarks>
+            <p class="body">Document クラスはオブジェクト階層のルート レベルを表します。<see cref="T:Infragistics.Documents.Word.Paragraph">段落</see>および<see cref="T:Infragistics.Documents.Word.Table">テーブル</see>などのブロック レベルのコンテンツのコンテナーとして使用されます。</p>
+            <p class="body">ブロック レベルのコンテンツは <see cref="P:Infragistics.Documents.Word.Document.ContentBlocks">ContentBlocks</see> コレクションで含まります。<see cref="M:Infragistics.Documents.Word.ContentBlocksCollection.AddParagraph">AddParagraph</see> および <see cref="M:Infragistics.Documents.Word.ContentBlocksCollection.AddTable">AddTable</see> メソッドを使用すると、段落およびテーブルを文書に追加することができます。</p>
+            <p class="body">作成者、タイトル、件名などの文書のプロパティを <see cref="P:Infragistics.Documents.Word.Document.DocumentProperties">DocumentProperties</see> プロパティによって指定します。</p>
+            <p class="body"><see cref="P:Infragistics.Documents.Word.Document.DefaultFont">DefaultFont</see>、<see cref="P:Infragistics.Documents.Word.Document.DefaultParagraphProperties">DefaultParagraphProperties</see>、および <see cref="P:Infragistics.Documents.Word.Document.DefaultTableProperties">DefaultTableProperties</see> プロパティを使用すると、文書のコンテンツのデフォルト書式設定属性を定義することができます。</p>
+            <p class="body">ページ サイズ、ページの方向、マージンなどのページのプロパティは <see cref="P:Infragistics.Documents.Word.Document.FinalSection">FinalSection</see> プロパティおよび <see cref="P:Infragistics.Documents.Word.Document.Sections">Sections</see> コレクションを使用して定義できます。FinalSection プロパティは、文書の全体のページ プロパティを制御するオブジェクトを返します。Sections コレクションはグループまたはブロック レベルのコンテンツのドキュメント セクションを定義する方法を提供します。Sections コレクションが 1 つ以上のメンバーを含む場合、FinalSection は、セクションが明示的に定義される最後のブロックの後にある文書のブロック レベル コンテンツのページ設定を定義します。</p>
+            <p class="body"><see cref="T:Infragistics.Documents.Word.SectionBase">セクション</see>の <see cref="P:Infragistics.Documents.Word.SectionBase.HeaderAllPages">HeaderAllPages</see>、<see cref="P:Infragistics.Documents.Word.SectionBase.FooterAllPages">FooterAllPages</see>、<see cref="P:Infragistics.Documents.Word.SectionBase.HeaderFirstPageOnly">HeaderFirstPageOnly</see>、および <see cref="P:Infragistics.Documents.Word.SectionBase.FooterFirstPageOnly">FooterFirstPageOnly</see> プロパティを使用すると、文書にヘッダーおよびフッターに追加できます。ヘッダーおよびフッターは文書と同じブロック レベルのコンテンツを含むことができます。コンテンツは、メイン文書コンテンツと同じ構文を使用してヘッダーおよびフッターに書き込まれます。ヘッダーおよびフッターは、Document と同じように ContentBlocks コレクションを公開します。</p>
+            <p class="body">実際値を変更しないで、プロパティの get および set メソッドの販売単位を変更するには、<see cref="P:Infragistics.Documents.Word.Document.Unit">Unit</see> プロパティを使用することができます。たとえば、フォント サイズの Unit プロパティが &apos;Point&apos; に設定されます。インデントまたは行間を設定するために &apos;Inch&apos; または &apos;Centimeter&apos; に変更される場合、以前に設定した値は変更しません。</p>
+            </remarks>
+        </member>
+        <member name="F:Infragistics.Documents.Word.Document.DefaultFileExtension">
+            <summary>このクラスで作成される文書のデフォルト ファイル拡張子です (&quot;docx&quot;)。</summary>
+        </member>
+        <member name="F:Infragistics.Documents.Word.Document.DefaultUnitOfMeasurement">
+            <summary><see cref="P:Infragistics.Documents.Word.Document.Unit">Unit</see> プロパティのデフォルト値 (Point)。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.#ctor">
+            <summary>クラスの新しいインスタンスを作成します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.CreateFont">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> で使用する新しい <see cref="T:Infragistics.Documents.Word.Font">Font</see> を返します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.CreateTextRun(System.String)">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> で使用する新しい <see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> を返します。</summary>
+            <param name="text">このランのテキスト。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.CreateHyperlink(System.String,System.String)">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> で使用する新しい <see cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink</see> を返します。</summary>
+            <param name="address">ハイパーリンクのアドレス。有効な URI に設定する必要があります。</param>
+            <param name="text">ハイパーリンクに表示されるテキスト。null 値の場合、<paramref name="address" /> が表示されます。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.CreateInlinePicture(System.Drawing.Image)">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> で使用する新しい <see cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture</see> を返します。</summary>
+            <param name="image">図と関連する画像。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.CreateAnchoredPicture(System.Drawing.Image)">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> で使用する新しい <see cref="T:Infragistics.Documents.Word.AnchoredPicture">AnchoredPicture</see> を返します。</summary>
+            <param name="image">図と関連する画像。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.CreateInlineShape(Infragistics.Documents.Word.ShapeType)">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> で使用する新しい <see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> を返します。</summary>
+            <param name="shapeType">図形タイプを定義する <see cref="T:Infragistics.Documents.Word.ShapeType">ShapeType</see> 定数 (線、矩形、楕円など)。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.CreateInlineShape(Infragistics.Documents.Word.VmlShape)">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> で使用する新しい <see cref="T:Infragistics.Documents.Word.InlineShape">InlineShape</see> を返します。</summary>
+            <param name="shape">以前に作成された図形のプロパティを定義する <see cref="T:Infragistics.Documents.Word.VmlShape">VmlShape</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.CreateAnchoredShape(Infragistics.Documents.Word.ShapeType)">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> で使用する新しい <see cref="T:Infragistics.Documents.Word.AnchoredShape">AnchoredShape</see> を返します。</summary>
+            <param name="shapeType">図形タイプを定義する <see cref="T:Infragistics.Documents.Word.ShapeType">ShapeType</see> 定数 (線、矩形、楕円など)。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.CreateAnchoredShape(Infragistics.Documents.Word.VmlShape)">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> で使用する新しい <see cref="T:Infragistics.Documents.Word.AnchoredShape">AnchoredShape</see> を返します。</summary>
+            <param name="shape">以前に作成された図形のプロパティを定義する <see cref="T:Infragistics.Documents.Word.VmlShape">VmlShape</see> インスタンス。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.CreateVmlShape(Infragistics.Documents.Word.ShapeType)">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> で使用する新しい <see cref="T:Infragistics.Documents.Word.VmlShape">VmlShape</see> を返します。</summary>
+            <param name="shapeType">図形タイプを定義する <see cref="T:Infragistics.Documents.Word.ShapeType">ShapeType</see> 定数 (線、矩形、楕円など)。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.Save(System.String)">
+            <summary>文書のコンテンツを MS Word2007 文書書式のファイルに保存します。</summary>
+            <param name="filename">宛先ファイルへの完全パス。ファイル拡張子がない場合、<see cref="F:Infragistics.Documents.Word.Document.DefaultFileExtension">DefaultFileExtension</see> を使用します。</param>
+            <remarks>
+            <p class="body">このメソッドから作成された出力は MS Word2007 書式をサポートする WordprocessingML または WordProcessingML 仕様をサポートするアプリケーションで使用できます。</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.Save(System.IO.Stream)">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> のコンテンツを指定された <paramref name="stream" /> にエクスポートします。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.Reset">
+            <summary>すべてのプロパティ値をそれぞれのデフォルトに復元し、すべてのコレクションの内容をクリアします。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Document.ToString">
+            <summary>このインスタンスの文字列表現を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Document.ContentBlocks">
+            <summary>この文書のブロック レベル コンテンツで含まれる<see cref="T:Infragistics.Documents.Word.Paragraph">段落</see>または<see cref="T:Infragistics.Documents.Word.Table">テーブル</see>などの <see cref="T:Infragistics.Documents.Word.ContentBlock">ContentBlock</see> から派生されるオブジェクトのコレクションを返します。</summary><seealso cref="M:Infragistics.Documents.Word.ContentBlocksCollection.AddParagraph">AddParagraph メソッド</seealso><seealso cref="M:Infragistics.Documents.Word.ContentBlocksCollection.AddTable">AddTable メソッド</seealso></member>
+        <member name="P:Infragistics.Documents.Word.Document.DocumentProperties">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Document">Document</see> のタイトル、作成者、件名などの情報を含むオブジェクトを返します。</summary><seealso cref="T:Infragistics.Documents.Word.WordDocumentProperties">DocumentProperties クラス</seealso></member>
+        <member name="P:Infragistics.Documents.Word.Document.HasDocumentProperties">
+            <summary><see cref="P:Infragistics.Documents.Word.Document.DocumentProperties">DocumentProperties</see> プロパティから返されたオブジェクトが作成されたか、そのプロパティがデフォルト以外の値に設定されるかどうかを示すブール値を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Document.DefaultFont">
+            <summary>この文書で詳細の設定がないすべての文字に適用する <see cref="T:Infragistics.Documents.Word.Font">Font</see> オブジェクトを返します。</summary>
+            <remarks>
+            <p class="body">このプロパティから返されるインスタンスのプロパティは、フォントが明示的に定義されない文書でのすべてのテキスト ランのフォント属性を定義します。</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Document.DefaultParagraphProperties">
+            <summary>プロパティが明示的に定義されない段落のプロパティを定義する <see cref="T:Infragistics.Documents.Word.ParagraphProperties">ParagraphProperties</see> インスタンスを返します。</summary><seealso cref="P:Infragistics.Documents.Word.Paragraph.Properties">Properties プロパティ (Paragraph クラス)</seealso></member>
+        <member name="P:Infragistics.Documents.Word.Document.HasDefaultParagraphProperties">
+            <summary><see cref="P:Infragistics.Documents.Word.Document.DefaultParagraphProperties">DefaultParagraphProperties</see> プロパティから返されたオブジェクトが作成されたか、そのプロパティがデフォルト以外の値に設定されるかどうかを示すブール値を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Document.DefaultTableProperties">
+            <summary>プロパティが明示的に定義されないテーブルのプロパティを定義する <see cref="T:Infragistics.Documents.Word.DefaultTableProperties">DefaultTableProperties</see> インスタンスを返します。</summary><seealso cref="T:Infragistics.Documents.Word.DefaultTableProperties">DefaultTableProperties クラス</seealso><seealso cref="P:Infragistics.Documents.Word.Table.Properties">Properties プロパティ (Table クラス)</seealso></member>
+        <member name="P:Infragistics.Documents.Word.Document.HasDefaultTableProperties">
+            <summary><see cref="P:Infragistics.Documents.Word.Document.DefaultTableProperties">DefaultTableProperties</see> プロパティから返されたオブジェクトが作成されたか、そのプロパティがデフォルト以外の値に設定されるかどうかを示すブール値を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Document.FinalSection">
+            <summary>文書の最後のセクションのページ サイズ、マージン、向きなどのプロパティを定義する <see cref="T:Infragistics.Documents.Word.DocumentFinalSection">DocumentFinalSection</see> インスタンスを返します。</summary>
+            <remarks>
+            <p class="body">このプロパティから返されるインスタンスは、ドキュメントで<see cref="T:Infragistics.Documents.Word.Section">セクション</see>に属していないすべてのコンテンツのページ設定を定義します。</p>
+            <p class="body">文書の段落またはテーブルで <see cref="P:Infragistics.Documents.Word.Document.Sections">sections</see> が定義されない場合、このプロパティはすべての文書の改ページを定義します。</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Document.NewLineType">
+            <summary>生成出力で新しい行を表すために使用するメソッドを決定する値を返すか、設定します。</summary>
+            <remarks>
+            <p class="body">newline 文字は改行または復帰として表すことができます。使用場合に基づいてドキュメント コンシューマーは改行または復帰の解析を変更することができます。たとえば、改行が段落で含まれるかどうかに基づいて、段落の両端揃えの動作も異なります。規格の段落で、復帰は新しい行を示す文字ですが、段落がテーブル セルに含まれる場合に、新しい行を示しません。</p>
+            <p class="body">このプロパティを使用し、文書内のすべてのテキストの改行を表すために使用されるメソッドを指定できます。<see cref="M:Infragistics.Documents.Word.ContentRunsCollection.AddNewLine(Infragistics.Documents.Word.NewLineType)">AddNewLine</see> メソッド オーバーロードは、<see cref="T:Infragistics.Documents.Word.NewLineType">NewLineType</see> パラメーターを取り、このプロパティの値とは独立した改行文字を生成するために使用できます。<see cref="T:Infragistics.Documents.Word.TextRun">TextRun</see> クラスも、NewLineType プロパティを公開し、TextRun ごとに改行文字を指定できるようにします。</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Document.Sections">
+            <summary>文書の特定の部分の改ページを定義する <see cref="T:Infragistics.Documents.Word.Section">Section</see> インスタンスのコレクションを返します。</summary>
+            <remarks>
+            <p class="body">Sections コレクションは、文書全体ではなく、<see cref="T:Infragistics.Documents.Word.ContentBlock">ContentBlocks</see> の範囲のセクションを定義する方法を提供します。たとえば、文書内の第 3 段落の Sections コレクションにメンバーが追加される場合、そのセクションのページ設定はこの文書の最初の 3 つの段落に適用されます。文書内の残りのコンテンツのページ設定は、<see cref="P:Infragistics.Documents.Word.Document.FinalSection">FinalSection</see> によって定義されます。</p>
+            <p class="body">Sections コレクションの各メンバーは、それが関連付けられているコンテンツ ブロックおよびそれより前にあるコンテンツ ブロックのページ設定を定義します。たとえば、文書内の第 3 段落にセクションが定義され、第 5 段落に別のセクションが定義される場合、第 4、第 5 段落のページ設定は 2 つ目のセクションで定義され、第 1、第 2、第 3 段落のページ設定は 1 つ目のセクションで定義されます。この場合、第 5 段落より後のすべての段落のページ設定は、FinalSection によって定義されます。</p>
+            </remarks><seealso cref="P:Infragistics.Documents.Word.Document.FinalSection">FinalSection プロパティ</seealso><seealso cref="T:Infragistics.Documents.Word.Section">Section クラス</seealso></member>
+        <member name="P:Infragistics.Documents.Word.Document.Unit">
+            <summary>グラフィック量を表すプロパティの暗黙の計測単位を示す値を返すか、設定します。</summary>
+            <remarks>
+            <p class="body">グラフィック量を表すプロパティのデフォルト計測単位は、デスクトップ パブリッシングで 1/72 インチと同じです。計測単位を再定義するためにこのプロパティは変更されます。それにより、グラフィック プロパティは開発者が使いやすい単位を使用して操作できます。</p>
+            <p class="body">すべてのプロパティ値は、twips (20 番目のポイント) として内部に保存されます。プロパティの get および set メソッドの実装で適切にカバーされます。開発者は以前保存したプロパティの値に影響せずに UI プロパティの値をいつでも変更できます。</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.Documents.Word.SectionHeaderFooter">
+            <summary><see cref="T:Infragistics.Documents.Word.SectionHeader">ヘッダー</see>および<see cref="T:Infragistics.Documents.Word.SectionFooter">フッター</see>の基本クラス。</summary>
+            <remarks>
+            <p class="body">
+            </p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.Documents.Word.SectionHeaderFooter.ContentBlocks">
+            <summary>このヘッダーまたはフッターのブロック レベル コンテンツで含まれる<see cref="T:Infragistics.Documents.Word.Paragraph">段落</see>または<see cref="T:Infragistics.Documents.Word.Table">テーブル</see>などの <see cref="T:Infragistics.Documents.Word.ContentBlock">ContentBlock</see> から派生されるオブジェクトのコレクションを返します。</summary>
+            <remarks>
+            <p class="body">ヘッダーとフッターは、段落またはテーブルなどのメイン文書と同じコンテンツをホストできます。</p>
+            </remarks><seealso cref="P:Infragistics.Documents.Word.Document.ContentBlocks">ContentBlocks コレクション (Document クラス)</seealso></member>
+        <member name="T:Infragistics.Documents.Word.SectionHeader">
+            <summary><see cref="T:Infragistics.Documents.Word.Section">セクション</see>の上に表示されるヘッダーをカプセル化します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.SectionFooter">
+            <summary><see cref="T:Infragistics.Documents.Word.Section">セクション</see>の下に表示されるフッターをカプセル化します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.Paragraph">
+            <summary>文書の段落をカプセル化します。</summary>
+            <remarks>
+            <p class="body">段落にテキストを追加するには、<see cref="M:Infragistics.Documents.Word.ContentRunsCollection.AddTextRun(System.String)">AddTextRun</see> メソッドを使用します。</p>
+            <p class="body">段落にハイパーリンクを追加するには、<see cref="M:Infragistics.Documents.Word.ContentRunsCollection.AddHyperlink(System.String,System.String)">AddHyperlink</see> メソッドを使用します。</p>
+            <p class="body">テキスト コンテンツの行間に表示される画像や図形を段落に追加するには、<see cref="M:Infragistics.Documents.Word.ContentRunsCollection.AddInlinePicture(System.Drawing.Image)">AddInlinePicture</see> メソッドや <see cref="M:Infragistics.Documents.Word.ContentRunsCollection.AddInlineShape(Infragistics.Documents.Word.ShapeType)">AddInlineShape</see> メソッドを使用します。</p>
+            <p class="body">文書内の特定の場所に固定される画像や図形を段落に追加するには、<see cref="M:Infragistics.Documents.Word.AnchorsCollection.AddAnchoredPicture(System.Drawing.Image)">AddAnchoredPicture</see> メソッドや <see cref="M:Infragistics.Documents.Word.AnchorsCollection.AddAnchoredShape(Infragistics.Documents.Word.ShapeType)">AddAnchoredShape</see> メソッドを使用します。</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Paragraph.#ctor(Infragistics.Documents.Word.Document)">
+            <summary>クラスの新しいインスタンスを作成します。</summary>
+            <param name="document">このインスタンスが関連付けられている <see cref="T:Infragistics.Documents.Word.Document">Document</see>。</param>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Paragraph.Anchors">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> の固定コンテンツを含むコレクションを返します。</summary>
+            <remarks>
+            <p class="body">テキスト コンテンツおよびテキストとインラインに表示するコンテンツは、<see cref="P:Infragistics.Documents.Word.Paragraph.ContentRuns">ContentRuns</see> コレクションで段落に追加します。画像または図形などの固定コンテンツは、Anchors コレクションにメンバーを追加して段落に追加できます。このコレクションのメンバーは固定されています。テキスト コンテンツによってフローしません。文書の固定位置に配置されます。</p>
+            </remarks><seealso cref="T:Infragistics.Documents.Word.AnchoredPicture">AnchoredPicture クラス</seealso><seealso cref="T:Infragistics.Documents.Word.AnchoredShape">AnchoredShape クラス</seealso><seealso cref="P:Infragistics.Documents.Word.Paragraph.ContentRuns">ContentRuns コレクション</seealso></member>
+        <member name="P:Infragistics.Documents.Word.Paragraph.ContentRuns">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> のテキスト、ハイパーリンク、インライン画像、行内の図などのインライン コンテンツを含むコレクションを返します。</summary>
+            <remarks>
+            <p class="body">段落のすべてのテキスト コンテンツは ContentRuns コレクションによって追加されます。このコレクションはテキストとインラインに表示するコンテンツも含みます。そのコンテンツは文書の指定した位置に固定されません。他のテキストによって配置されます。そのコンテンツの例は以下のリストです。<ul>
+            <li><see cref="T:Infragistics.Documents.Word.TextHyperlink">ハイパーリンク</see></li>
+            <li><see cref="T:Infragistics.Documents.Word.InlinePicture">行内の図</see></li>
+            <li><see cref="T:Infragistics.Documents.Word.InlineShape">行内の図形</see></li>
+            </ul>
+            </p>
+            </remarks><seealso cref="T:Infragistics.Documents.Word.TextRun">TextRun クラス</seealso><seealso cref="T:Infragistics.Documents.Word.TextHyperlink">TextHyperlink クラス</seealso><seealso cref="T:Infragistics.Documents.Word.InlinePicture">InlinePicture クラス</seealso><seealso cref="T:Infragistics.Documents.Word.InlineShape">InlineShape クラス</seealso><seealso cref="P:Infragistics.Documents.Word.Paragraph.Anchors">Anchors コレクション</seealso></member>
+        <member name="P:Infragistics.Documents.Word.Paragraph.Properties">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> のプロパティを定義する <see cref="T:Infragistics.Documents.Word.ParagraphProperties">ParagraphProperties</see> インスタンスを返します。</summary>
+            <remarks>
+            <p class="body">このプロパティから返されるオブジェクトは、段落の配置、インデント、および行間などを変更する方法を提供します。</p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.Documents.Word.WordResourceCustomizer">
+            <summary>リソース文字列のカスタマイズ機能を提供するクラス。</summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Documents.Word.WordResourceCustomizer.#ctor">
+            <summary>DocumentsResourceCustomizer クラスの新しいインスタンスを作成します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.WordResourceCustomizer.GetCustomizedString(System.String)">
+            <summary>指定した文字列リソース名によって識別されるカスタマイズされた文字列を取得します。</summary>
+            <param name="name">カスタマイズされた文字列リソース名。</param>
+            <returns>カスタマイズした文字列。リソースがカスタマイズされていなければ null。</returns><seealso cref="M:Infragistics.Documents.Word.WordResourceCustomizer.ResetAllCustomizedStrings" /><seealso cref="M:Infragistics.Documents.Word.WordResourceCustomizer.ResetCustomizedString(System.String)" /><seealso cref="M:Infragistics.Documents.Word.WordResourceCustomizer.SetCustomizedString(System.String,System.String)" /></member>
+        <member name="M:Infragistics.Documents.Word.WordResourceCustomizer.ResetAllCustomizedStrings">
+            <summary><see cref="M:Infragistics.Documents.Word.WordResourceCustomizer.SetCustomizedString(System.String,System.String)" /> メソッドを呼び出してカスタマイズした文字列をすべてクリアします。</summary><seealso cref="M:Infragistics.Documents.Word.WordResourceCustomizer.SetCustomizedString(System.String,System.String)" /><seealso cref="M:Infragistics.Documents.Word.WordResourceCustomizer.ResetCustomizedString(System.String)" /></member>
+        <member name="M:Infragistics.Documents.Word.WordResourceCustomizer.ResetCustomizedString(System.String)">
+            <summary>特定の文字列リソース名で識別されるカスタマイズ文字列をリセットします。</summary>
+            <param name="name">リセット後、対象の文字列はリソースファイルから読み込みされるようになります。</param><seealso cref="M:Infragistics.Documents.Word.WordResourceCustomizer.SetCustomizedString(System.String,System.String)" /></member>
+        <member name="M:Infragistics.Documents.Word.WordResourceCustomizer.SetCustomizedString(System.String,System.String)">
+            <summary>指定された文字列リソース名によって識別されるカスタマイズされた文字列を設定します。</summary>
+            <param name="name">リセット後、対象の文字列はリソースファイルから読み込みされるようになります。</param>
+            <param name="customizedText">カスタマイズした文字列。null を指定した場合は、<see cref="M:Infragistics.Documents.Word.WordResourceCustomizer.ResetCustomizedString(System.String)" /> を呼び出したときと同じ結果になります。</param><seealso cref="M:Infragistics.Documents.Word.WordResourceCustomizer.ResetAllCustomizedStrings" /><seealso cref="M:Infragistics.Documents.Word.WordResourceCustomizer.ResetCustomizedString(System.String)" /></member>
+        <member name="T:Infragistics.Documents.Word.Resources">
+            <summary>このアセンブリ用の <see cref="!:Infragistics.Documents.DocumentsResourceCustomizer" /> インスタンスを公開します。</summary><seealso cref="P:Infragistics.Documents.Word.Resources.Customizer" /><seealso cref="!:Infragistics.Documents.DocumentsResourceCustomizer" /></member>
+        <member name="M:Infragistics.Documents.Word.Resources.GetString(System.String,System.Object[])">
+            <summary>指定された名前とデフォルト使用言語を使用してリソース文字列を返します。</summary>
+            <param name="name">取得する文字列リソースの名前。</param>
+            <param name="args">文字列を書式設定するとき、string.Format メソッドに提供される引数。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Resources.GetString(System.String)">
+            <summary>指定したリソース名とデフォルト使用言語を使用して リソース文字列を返します。この文字列は指定した引数を使用して書式設定されます。</summary>
+            <param name="name">取得する文字列リソースの名前。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Resources.GetObject(System.String)">
+            <summary>指定された名前を使用してリソース オブジェクトを返します</summary>
+            <param name="name">リソース項目の名前</param>
+            <returns>指定されたリソースを含むオブジェクト。</returns>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Resources.Customizer">
+            <summary>このアセンブリの <see cref="!:Infragistics.Documents.DocumentsResourceCustomizer" /> を返します。</summary><seealso cref="!:Infragistics.Documents.DocumentsResourceCustomizer" /></member>
+        <member name="T:Infragistics.Documents.Word.SectionBase">
+            <summary><see cref="T:Infragistics.Documents.Word.Section">Section</see> と <see cref="T:Infragistics.Documents.Word.DocumentFinalSection">DocumentFinalSection</see> クラスが派生する基本クラス。</summary>
+            <remarks>
+            <p class="body">文書のセクションに関連付けられたすべてのコンテンツのページ設定をカスタマイズするには、<see cref="P:Infragistics.Documents.Word.SectionBase.Properties">Properties</see> プロパティによって返される <see cref="T:Infragistics.Documents.Word.SectionProperties">SectionProperties</see> オブジェクトを使用します。このオブジェクトを使用すると、セクションのページ サイズ、余白、および方向を定義できます。</p>
+            <p class="body">セクションの <see cref="P:Infragistics.Documents.Word.SectionBase.HeaderAllPages">HeaderAllPages</see>、<see cref="P:Infragistics.Documents.Word.SectionBase.HeaderFirstPageOnly">HeaderFirstPageOnly</see>、<see cref="P:Infragistics.Documents.Word.SectionBase.FooterAllPages">FooterAllPages</see>、および <see cref="P:Infragistics.Documents.Word.SectionBase.FooterFirstPageOnly">FooterFirstPageOnly</see> プロパティを使用すると、セクションにヘッダーおよびフッターを追加できます。</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.Documents.Word.SectionBase.HeaderFirstPageOnly">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.SectionBase">Section</see> の最初のページのヘッダーに表示されるコンテンツをカプセル化する <see cref="T:Infragistics.Documents.Word.SectionHeader">SectionHeader</see> インスタンスを返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.SectionBase.HeaderAllPages">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.SectionBase">Section</see> のすべてのページのヘッダーに表示されるコンテンツをカプセル化する <see cref="T:Infragistics.Documents.Word.SectionHeader">SectionHeader</see> インスタンスを返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.SectionBase.FooterFirstPageOnly">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.SectionBase">Section</see> の最初のページのフッターに表示されるコンテンツをカプセル化する <see cref="T:Infragistics.Documents.Word.SectionFooter">SectionFooter</see> インスタンスを返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.SectionBase.FooterAllPages">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.SectionBase">Section</see> のすべてのページのフッターに表示されるコンテンツをカプセル化する <see cref="T:Infragistics.Documents.Word.SectionFooter">SectionFooter</see> インスタンスを返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.SectionBase.Properties">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Section">Section</see> のプロパティを定義する <see cref="T:Infragistics.Documents.Word.SectionProperties">SectionProperties</see> インスタンスを返します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.Section">
+            <summary>文書のセクションの改ページ プロパティおよびヘッダーまたはフッター コンテンツをカプセル化します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Section.ContentBlock">
+            <summary>このインスタンスに関連付けられた <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> または <see cref="T:Infragistics.Documents.Word.Table">Table</see> を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Section.Document">
+            <summary>このインスタンスに関連付けられた <see cref="T:Infragistics.Documents.Word.Document">Document</see> を返します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.DocumentFinalSection">
+            <summary>最後の文書セクションのプロパティをカプセル化します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.SectionsCollection">
+            <summary>関連する <see cref="T:Infragistics.Documents.Word.Document">Document</see> の特定の部分の改ページを定義する <see cref="T:Infragistics.Documents.Word.Section">Section</see> インスタンスを含みます。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.SectionsCollection.Add(Infragistics.Documents.Word.Table)">
+            <summary>指定した <see cref="T:Infragistics.Documents.Word.Table">Table</see> およびその前のコンテンツ ブロックで改ページを定義する <see cref="T:Infragistics.Documents.Word.Section">Section</see> を追加します。</summary>
+            <returns>追加された <see cref="T:Infragistics.Documents.Word.Section">Section</see> への参照。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.SectionsCollection.Add(Infragistics.Documents.Word.Paragraph)">
+            <summary>指定した <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> およびその前のコンテンツ ブロックで改ページを定義する <see cref="T:Infragistics.Documents.Word.Section">Section</see> を追加します。</summary>
+            <returns>追加された <see cref="T:Infragistics.Documents.Word.Section">Section</see> への参照。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.SectionsCollection.Contains(Infragistics.Documents.Word.Paragraph)">
+            <summary>指定した <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> インスタンスと関連する要素はこのコレクションに存在するかどうかを示すブール値を返します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.SectionsCollection.Contains(Infragistics.Documents.Word.Table)">
+            <summary>指定した <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> インスタンスと関連する要素はこのコレクションに存在するかどうかを示すブール値を返します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.SectionsCollection.Contains(Infragistics.Documents.Word.ContentBlock)">
+            <summary>指定した <see cref="T:Infragistics.Documents.Word.ContentBlock">ContentBlock</see> インスタンスと関連する要素はこのコレクションに存在するかどうかを示すブール値を返します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.SectionsCollection.Remove(Infragistics.Documents.Word.Paragraph)">
+            <summary>指定された<see cref="T:Infragistics.Documents.Word.Paragraph">段落</see>に関連付けられた要素を削除します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.SectionsCollection.Remove(Infragistics.Documents.Word.Table)">
+            <summary>指定された<see cref="T:Infragistics.Documents.Word.Table">テーブル</see>に関連付けられた要素を削除します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.SectionsCollection.Clear">
+            <summary>このコレクションからすべて要素を削除します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.SectionsCollection.ToString">
+            <summary>このオブジェクトの文字列表現を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.SectionsCollection.Count">
+            <summary>このコレクションに含まれる項目の数を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.SectionsCollection.Item(Infragistics.Documents.Word.Paragraph)">
+            <summary>このコレクションで、指定された <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> に関連付けられた <see cref="T:Infragistics.Documents.Word.Section">Section</see> を返します。</summary>
+            <param name="paragraph">返されるセクションに関連する段落。</param>
+        </member>
+        <member name="P:Infragistics.Documents.Word.SectionsCollection.Item(Infragistics.Documents.Word.Table)">
+            <summary>このコレクションで、指定された <see cref="T:Infragistics.Documents.Word.Table">Table</see> に関連付けられた <see cref="T:Infragistics.Documents.Word.Section">Section</see> を返します。</summary>
+            <param name="table">返されるセクションに関連するテーブル。</param>
+        </member>
+        <member name="T:Infragistics.Documents.Word.Table">
+            <summary>文書の<see cref="T:Infragistics.Documents.Word.Table">テーブル</see>をカプセル化します。</summary>
+            <remarks>
+            <p class="body">テーブルは、行とセルを含むコンテンツのブロックです。テーブルに行を追加するには、<see cref="P:Infragistics.Documents.Word.Table.Rows">Rows</see> コレクションを使用します。</p>
+            <p class="body">テーブル内の列数は、<see cref="P:Infragistics.Documents.Word.Table.Columns">Columns</see> コレクション内の要素数によって決定されます。</p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Documents.Word.Table.#ctor(Infragistics.Documents.Word.Document)">
+            <summary>クラスの新しいインスタンスを作成します。</summary>
+            <param name="document">このインスタンスが関連付けられている <see cref="T:Infragistics.Documents.Word.Document">Document</see>。</param>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Table.Columns">
+            <summary>このテーブルに表示される列を表す <see cref="T:Infragistics.Documents.Word.TableColumn">TableColumn</see> インスタンスのコレクションを返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Table.Rows">
+            <summary>このテーブルに表示される行を表す <see cref="T:Infragistics.Documents.Word.TableRow">TableRow</see> インスタンスのコレクションを返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.Table.Properties">
+            <summary>この <see cref="T:Infragistics.Documents.Word.Table">Table</see> のプロパティを定義する <see cref="T:Infragistics.Documents.Word.TableProperties">TableProperties</see> インスタンスを返します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.TableCell">
+            <summary><see cref="T:Infragistics.Documents.Word.TableRow">行</see>で<see cref="T:Infragistics.Documents.Word.TableCell">セル</see>をカプセル化します。</summary>
+            <remarks>
+            <p class="body">
+            </p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.Documents.Word.TableContent">
+            <summary><see cref="T:Infragistics.Documents.Word.TableRow">TableRow</see>、<see cref="T:Infragistics.Documents.Word.TableColumn">TableColumn</see> および <see cref="T:Infragistics.Documents.Word.TableCell">TableCell</see> クラスのための基本クラス。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableContent.Document">
+            <summary>この項目が関連付けられている <see cref="T:Infragistics.Documents.Word.Document">Document</see> を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableContent.Index">
+            <summary>属するコレクション内の項目の順序位置を返します。コレクションに属しない場合は、 -1 を返します。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.TableCell.#ctor(Infragistics.Documents.Word.Document)">
+            <summary>クラスの新しいインスタンスを作成します。</summary>
+            <param name="document">このインスタンスが関連付けられている <see cref="T:Infragistics.Documents.Word.Document">Document</see>。</param>
+        </member>
+        <member name="M:Infragistics.Documents.Word.TableCell.SetText(System.String)">
+            <summary>セルに簡易のテキスト値を割り当てます。</summary>
+            <param name="value">割り当てられる文字列。</param>
+            <remarks>
+            <p class="body"><see cref="P:Infragistics.Documents.Word.TableCell.ContentBlocks">ContentBlocks</see> コレクションまたは <see cref="T:Infragistics.Documents.Word.Paragraph">Paragraph</see> を作成しないで、テーブル セルに簡易のテキスト値を割り当てるために、SetText メソッドを使用します。</p>
+            <p class="body">書式属性が混在するテキスト、ハイパーリンク、画像、図形、およびテーブルなど、より複雑なコンテンツを追加するには、<see cref="P:Infragistics.Documents.Word.TableCell.ContentBlocks">ContentBlocks</see> コレクションを使用します。</p>
+            <p class="body">このメソッドを呼び出すと、<see cref="P:Infragistics.Documents.Word.TableCell.ContentBlocks">ContentBlocks</see> コレクションのコンテンツが空になることに注意してください。</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableCell.CellsCollection">
+            <summary>このインスタンスが属する <see cref="T:Infragistics.Documents.Word.TableCellsCollection">TableCellsCollection</see> を返すか、このセルが現在コレクションに属していない場合は null を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableCell.ContentBlocks">
+            <summary>このテーブル セルのブロック レベル コンテンツで含まれる<see cref="T:Infragistics.Documents.Word.Paragraph">段落</see>または<see cref="T:Infragistics.Documents.Word.Table">テーブル</see>などの <see cref="T:Infragistics.Documents.Word.ContentBlock">ContentBlock</see> から派生されるオブジェクトのコレクションを返します。</summary>
+            <remarks>
+            <p class="body">テーブル セルは段落またはテーブルなどのメイン文書と同じコンテンツをホストできます。</p>
+            <p class="body"><see cref="M:Infragistics.Documents.Word.TableCell.SetText(System.String)">SetText</see> メソッドによって、単純なテキストをテーブル セルに割り当てられます。このメソッドは、デベロッパーの便宜上の目的で拡張されていて、段落および TextRun のほかこのコレクションの作成に伴うオーバーヘッドの影響なく、特定のフォント属性を持たないテキスト値をセルに表示できます。</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableCell.Properties">
+            <summary>この <see cref="T:Infragistics.Documents.Word.TableCell">TableCell</see> のプロパティを定義する <see cref="T:Infragistics.Documents.Word.TableCellProperties">TableCellProperties</see> インスタンスを返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableCell.Row">
+            <summary>このセルが関連付けられている <see cref="T:Infragistics.Documents.Word.TableRow">TableRow</see> を返します。現在、このセルが行に関連付けられていない場合は Null を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableCell.Table">
+            <summary>このセルが関連付けられている <see cref="T:Infragistics.Documents.Word.Table">Table</see> を返します。現在、このセルがテーブルに関連付けられていない場合は Null を返します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.TableCellsCollection">
+            <summary><see cref="T:Infragistics.Documents.Word.TableRow">行</see>に属する<see cref="T:Infragistics.Documents.Word.TableCell">セル</see>を含みます。</summary>
+            <remarks>
+            <p class="body">
+            </p>
+            </remarks>
+        </member>
+        <member name="T:Infragistics.Documents.Word.TableContentsCollection">
+            <summary><see cref="T:Infragistics.Documents.Word.TableContent">TableContent</see> クラスから派生するタイプのコレクションの基本クラス。</summary>
+        </member>
+        <member name="M:Infragistics.Documents.Word.TableCellsCollection.Add">
+            <summary>関連するテーブルに新しい <see cref="T:Infragistics.Documents.Word.TableCell">TableCell</see> を追加します。</summary>
+            <returns>追加された <see cref="T:Infragistics.Documents.Word.TableCell">TableCell</see> への参照。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.TableCellsCollection.Insert(System.Int32)">
+            <summary>関連するテーブルの指定した順序位置に新しい <see cref="T:Infragistics.Documents.Word.TableCell">TableCell</see> を挿入します。</summary>
+            <param name="index">行を挿入するこのコレクションの順序位置。</param>
+            <returns>挿入された <see cref="T:Infragistics.Documents.Word.TableCell">TableCell</see> への参照。</returns>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableCellsCollection.Item(System.Int32)">
+            <summary>このコレクション内の指定した順序位置にある <see cref="T:Infragistics.Documents.Word.TableCell">TableCell</see> インスタンスを返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableCellsCollection.Row">
+            <summary>このコレクションが属する <see cref="T:Infragistics.Documents.Word.TableRow">TableRow</see> を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableCellsCollection.Table">
+            <summary>このコレクションが関連付けられている <see cref="T:Infragistics.Documents.Word.Table">Table</see> を返します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.TableColumn">
+            <summary><see cref="T:Infragistics.Documents.Word.Table">テーブル</see>で<see cref="T:Infragistics.Documents.Word.TableColumn">列</see>をカプセル化します。</summary>
+            <remarks>
+            <p class="body">
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Documents.Word.TableColumn.#ctor(Infragistics.Documents.Word.Document)">
+            <summary>クラスの新しいインスタンスを作成します。</summary>
+            <param name="document">このインスタンスが関連付けられている <see cref="T:Infragistics.Documents.Word.Document">Document</see>。</param>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableColumn.ColumnsCollection">
+            <summary>このインスタンスが属している <see cref="T:Infragistics.Documents.Word.TableColumnsCollection">TableColumnsCollection</see> を返します。現在、この列がテーブルに関連付けられていない場合は Null を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableColumn.Table">
+            <summary>この列が関連付けられている <see cref="T:Infragistics.Documents.Word.Table">Table</see> を返します。現在、この列がテーブルに関連付けられていない場合は Null を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableColumn.PreferredWidth">
+            <summary>この列に最適な幅を返すか、設定します。</summary>
+            <remarks>
+            <p class="body">このプロパティは、<see cref="P:Infragistics.Documents.Word.TableProperties.Layout">Layout</see> プロパティが  &apos;Fixed&apos; に設定されている場合にのみ有効です。</p>
+            </remarks><seealso cref="P:Infragistics.Documents.Word.TableProperties.PreferredWidth">PreferredWidth</seealso><seealso cref="P:Infragistics.Documents.Word.TableProperties.Layout">レイアウト</seealso></member>
+        <member name="T:Infragistics.Documents.Word.TableColumnsCollection">
+            <summary><see cref="T:Infragistics.Documents.Word.Table">テーブル</see>に属する<see cref="T:Infragistics.Documents.Word.TableColumn">列</see>を含みます。</summary>
+            <remarks>
+            <p class="body">
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Documents.Word.TableColumnsCollection.Add">
+            <summary>関連するテーブルに新しい <see cref="T:Infragistics.Documents.Word.TableColumn">TableColumn</see> を追加します。</summary>
+            <returns>追加された <see cref="T:Infragistics.Documents.Word.TableColumn">TableColumn</see> への参照。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.TableColumnsCollection.Insert(System.Int32)">
+            <summary>関連するテーブルの指定した順序位置に新しい <see cref="T:Infragistics.Documents.Word.TableColumn">TableColumn</see> を挿入します。</summary>
+            <param name="index">行を挿入するこのコレクションの順序位置。</param>
+            <returns>挿入された <see cref="T:Infragistics.Documents.Word.TableColumn">TableColumn</see> への参照。</returns>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableColumnsCollection.Item(System.Int32)">
+            <summary>このコレクション内の指定した順序位置にある <see cref="T:Infragistics.Documents.Word.TableColumn">TableColumn</see> インスタンスを返します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.TableRow">
+            <summary><see cref="T:Infragistics.Documents.Word.Table">テーブル</see>で<see cref="T:Infragistics.Documents.Word.TableRow">行</see>をカプセル化します。</summary>
+            <remarks>
+            <p class="body">
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Documents.Word.TableRow.#ctor(Infragistics.Documents.Word.Document)">
+            <summary>クラスの新しいインスタンスを作成します。</summary>
+            <param name="document">このインスタンスが関連付けられている <see cref="T:Infragistics.Documents.Word.Document">Document</see>。</param>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableRow.Cells">
+            <summary>この行のセルを表す <see cref="T:Infragistics.Documents.Word.TableCell">TableCell</see> インスタンスのコレクションを返します。</summary>
+            <remarks>
+            <p class="body">1 つの TableRow は同じ Table で他の TableRow とのセル数は異なるため、Cells コレクションは関連するテーブルの <see cref="P:Infragistics.Documents.Word.Table.Columns">Columns</see> コレクションと連続されなくて、明示的に生成する必要があります。</p>
+            <p class="body">関連する Table の Columns コレクションは、この Cells コレクションよりすくない要素を含む場合、追加のセルは最後の列に相対するセルの後に表示されます。</p>
+            </remarks>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableRow.RowsCollection">
+            <summary>このインスタンスが属する <see cref="T:Infragistics.Documents.Word.TableRowsCollection">TableRowsCollection</see> を返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableRow.Properties">
+            <summary>この <see cref="T:Infragistics.Documents.Word.TableRow">TableRow</see> のプロパティを定義する <see cref="T:Infragistics.Documents.Word.TableRowProperties">TableRowProperties</see> インスタンスを返します。</summary>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableRow.Table">
+            <summary>この行が属している <see cref="T:Infragistics.Documents.Word.Table">Table</see> を返します。現在、この行がどのテーブルにも関連付けられていない場合は Null を返します。</summary>
+        </member>
+        <member name="T:Infragistics.Documents.Word.TableRowsCollection">
+            <summary><see cref="T:Infragistics.Documents.Word.Table">テーブル</see>に属する<see cref="T:Infragistics.Documents.Word.TableRow">行</see>を含みます。</summary>
+            <remarks>
+            <p class="body">
+            </p>
+            </remarks>
+        </member>
+        <member name="M:Infragistics.Documents.Word.TableRowsCollection.Add">
+            <summary>関連するテーブルに新しい <see cref="T:Infragistics.Documents.Word.TableRow">TableRow</see> を追加します。</summary>
+            <returns>追加された <see cref="T:Infragistics.Documents.Word.TableRow">TableRow</see> への参照。</returns>
+        </member>
+        <member name="M:Infragistics.Documents.Word.TableRowsCollection.Insert(System.Int32)">
+            <summary>関連するテーブルの指定した順序位置に新しい <see cref="T:Infragistics.Documents.Word.TableRow">TableRow</see> を挿入します。</summary>
+            <param name="index">行を挿入するこのコレクションの順序位置。</param>
+            <returns>挿入された <see cref="T:Infragistics.Documents.Word.TableRow">TableRow</see> への参照。</returns>
+        </member>
+        <member name="P:Infragistics.Documents.Word.TableRowsCollection.Item(System.Int32)">
+            <summary>このコレクション内の指定した順序位置にある <see cref="T:Infragistics.Documents.Word.TableRow">TableRow</see> インスタンスを返します。</summary>
+        </member>
+        <member name="T:Infragistics.InfragisticsFeatureAttribute">
+            <summary>新機能の部分として追加された公開タイプまたはメンバーを示します。</summary>
+        </member>
+        <member name="M:Infragistics.InfragisticsFeatureAttribute.#ctor">
+            <summary>新しい <see cref="T:Infragistics.InfragisticsFeatureAttribute" /> インスタンスを作成します。</summary>
+        </member>
+        <member name="P:Infragistics.InfragisticsFeatureAttribute.Exclude">
+            <summary>メンバーまたはタイプは内部の機能ドキュメントから除外されるかどうかを示す値を取得または設定します。</summary>
+        </member>
+        <member name="P:Infragistics.InfragisticsFeatureAttribute.FeatureName">
+            <summary>機能の短い名称説明を取得または設定します。</summary>
+        </member>
+        <member name="P:Infragistics.InfragisticsFeatureAttribute.SubFeatureName">
+            <summary>機能の詳細のサブ機能名称説明を取得または設定します。</summary>
+        </member>
+        <member name="P:Infragistics.InfragisticsFeatureAttribute.Version">
+            <summary>機能が追加されたバージョンを取得または設定します。</summary>
+        </member>
+        <member name="T:Infragistics.Shared.AssemblyVersion">
+            <summary>Infragistics アセンブリのバージョン情報を含みます。</summary>
+        </member>
+        <member name="F:Infragistics.Shared.AssemblyVersion.MajorMinor">
+            <summary>アセンブリ バージョンの Major.Minor 番号部分。</summary>
+        </member>
+        <member name="F:Infragistics.Shared.AssemblyVersion.Build">
+            <summary>アセンブリ バージョンの Build 番号部分。</summary>
+        </member>
+        <member name="F:Infragistics.Shared.AssemblyVersion.Revision">
+            <summary>アセンブリ バージョンの Revision 番号部分。</summary>
+        </member>
+        <member name="F:Infragistics.Shared.AssemblyVersion.Version">
+            <summary>アセンブリ バージョン番号。</summary>
+        </member>
+        <member name="F:Infragistics.Shared.AssemblyVersion.CompanyName">
+            <summary>アセンブリ会社名。</summary>
+        </member>
+        <member name="F:Infragistics.Shared.AssemblyVersion.EndCopyrightYear">
+            <summary>アセンブリ著作権の終了年。</summary>
+        </member>
+        <member name="F:Infragistics.Shared.AssemblyVersion.SatelliteContractVersion">
+            <summary>サテライト アセンブリのアセンブリ バージョン番号。</summary>
+        </member>
+        <member name="F:Infragistics.Shared.AssemblyVersion.Configuration">
+            <summary>アセンブリ用の現在のビルド構成。</summary>
+        </member>
+    </members>
+</doc>

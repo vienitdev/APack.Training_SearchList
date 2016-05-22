@@ -1,0 +1,208 @@
+@import './constants.less';
+
+/*-----------------------------------------------------------------------------
+    データテーブルのスタイル定義
+-----------------------------------------------------------------------------*/
+@datatable-body-bg-color : #ffffff;
+@datatable-header-bg-color :@theme-bg-color - 120;
+@datatable-header-text-color: @default-text-color + 250;
+@datatable-body-text-color: @default-text-color;
+@datatable-border-color: @default-bd-color;
+@datatable-border: 1px solid @datatable-border-color;
+@datatable-unselected-bg-color: @theme-unselected-color;
+@datatable-selected-bg-color: @theme-primary-color;
+@datatable-selected-row-color: @theme-primary-color + 40;
+@line-height: 16px;
+
+/* TODO: .dt-container .fix-columns table.datatable に変更予定*/
+.dt-container .fix-columns table.datatable
+{
+    border-right: 3px solid @datatable-border-color;
+}
+
+table.datatable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-right: 1px;
+    max-width: 2000px;
+    line-height: @line-height;
+
+    th,td {
+        border-collapse: collapse;
+        vertical-align: middle;
+        padding: 2px;
+    }
+
+    th {
+        border: @datatable-border;
+        background-color: @datatable-header-bg-color;
+        color:@datatable-header-text-color;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        i{
+            margin-left:5px;
+        }
+    }
+
+
+    td {
+        border: @datatable-border;
+        color: @datatable-body-text-color;
+        button {
+            padding: 0 2px 0 2px;
+            min-width:0;
+        }
+        label {
+            min-width:0;
+        }
+        input[type="checkbox"] {
+            vertical-align: middle;
+        }
+    }
+
+    tbody:nth-child(even) td {
+        /*background-color: @datatable-body-bg-color - 5;*/
+        background-color: transparent; 
+    }
+
+    td.center {
+        text-align: center;
+    }
+    tbody.has-error td {
+        background-color: @error-bg-color !important;
+    }
+
+    tbody {
+        background-color: @datatable-body-bg-color;
+    }
+
+    tfoot {
+        background-color: @datatable-body-bg-color;
+    }
+
+    input[type="text"],input[type="password"], select, textarea {
+        margin:0px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    button {
+        margin:0px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    .select-tab
+    {
+        border-left-width:7px;
+        border-left-style:solid;
+        border-left-color: @datatable-unselected-bg-color;
+
+        min-width:0px;
+        display: block;
+        height:24px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+
+        &.select-tab-2lines
+        {
+            height:55px;
+        }
+
+    }
+    .selected
+    {
+        border-left-color: @datatable-selected-bg-color;
+    }
+}
+
+/*-----------------------------------------------------------------------------
+    データテーブルのカレンダー表示のクラス定義
+-----------------------------------------------------------------------------*/
+@table-saturday-color: #cdcdfe;
+@table-sunday-color:#ffd6d6;
+table.datatable {
+
+    tbody .date-col, tbody.date-row{
+
+        &.sat{
+            background-color: @table-saturday-color;
+            input[type=text], select {
+                border-color: darken(@table-saturday-color, 5);
+                background-color: lighten(@table-saturday-color, 9);
+            }
+        }
+        &.sun{
+            background-color: @table-sunday-color;
+            input[type=text], select {
+                border-color: darken(@table-sunday-color, 5);
+                background-color: lighten(@table-sunday-color, 7);
+            }
+        }
+    }
+}
+
+.dt-container {
+    position:relative;
+    overflow-x:auto;
+    //overflow-y:hidden;
+    /*border-bottom: 1px solid @default-bd-color;*/
+
+    .fix-columns {
+        position: absolute;
+        table.datatable {
+            margin-right: 0px;
+             z-index:10;
+        }
+    }
+
+    .dt-fix-head {
+
+    }
+
+    .dt-head {
+        overflow-x: hidden;
+    }
+
+    .dt-body {
+        position:relative;
+        overflow-x: auto;
+        overflow-y:scroll;
+        top:0;
+
+        thead th, thead td {
+            height:0 !important;
+            padding:0 !important;
+            border-top:0 !important;
+            border-bottom:0 !important;
+        }
+    }
+
+    .dt-body.dt-fix-body {
+        margin-top: 0px;
+        position: relative;
+        top:0;
+        overflow: hidden;
+    }
+
+    .dt-foot {
+        overflow-x: hidden;
+    }
+
+    .dt-fix-foot {
+
+    }
+
+    .wait {
+        width:100%;
+        height:100%;
+        position:absolute;
+        background-color:white;
+        top:0px;
+        left:0px;
+    }
+}

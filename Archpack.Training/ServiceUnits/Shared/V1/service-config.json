@@ -1,0 +1,14 @@
+﻿{
+    "name": "Shared",
+    "version": "0.0.1",
+    "unavailable": false,
+    "display": "共有",
+    "menu": {
+      "hidden": true
+    },
+    "items": [
+    ],
+    "connectionStrings": {
+    },
+    "availablePageMode": [ "test" ]
+}

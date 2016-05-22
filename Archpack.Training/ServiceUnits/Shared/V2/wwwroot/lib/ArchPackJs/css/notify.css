@@ -1,0 +1,94 @@
+﻿/*-----------------------------------------------------------------------------
+    テーマ変数定義
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+    メッセージ表示領域のクラス定義
+-----------------------------------------------------------------------------*/
+.message-area {
+  margin-left: auto;
+  margin-right: auto;
+}
+.message-area span {
+  float: left;
+  margin: 8px;
+}
+.message-area .notify-title-holder {
+  height: 25px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.message-area .notify-title-message-length {
+  margin-right: 5px;
+}
+.message-area .notify-title-open,
+.message-area .notify-title-close {
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: -5px;
+}
+.message-area .alert-message {
+  color: #ff6666;
+  background-color: #fff7f7;
+  border-top: 2px solid #ff6666;
+  max-height: 200px;
+  overflow: auto;
+}
+.message-area .alert-message .badge {
+  background-color: #f55c5c;
+}
+.message-area .alert-message ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.message-area .alert-message ul pre {
+  background-color: #ffffff;
+  font-family: Segoe UI, Meiryo, MS PGothic;
+  color: #ff6666;
+  display: block;
+  padding: 4px;
+  padding-left: 40px;
+  text-decoration: underline;
+}
+.message-area .alert-message ul pre:hover {
+  background-color: #fff7f7;
+  cursor: pointer;
+}
+.message-area .alert-message .alert-clickable {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.message-area .info-message {
+  color: #31708f;
+  background-color: #f2ffff;
+  border-top: 2px solid #31708f;
+  max-height: 200px;
+  overflow: auto;
+}
+.message-area .info-message .badge {
+  background-color: #276685;
+}
+.message-area .info-message ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+.message-area .info-message ul pre {
+  background-color: #ffffff;
+  font-family: Segoe UI, Meiryo, MS PGothic;
+  color: #31708f;
+  display: block;
+  padding: 4px;
+  padding-left: 40px;
+  text-decoration: underline;
+}
+.message-area .info-message ul pre:hover {
+  background-color: #f2ffff;
+  cursor: pointer;
+}
+.message-area .info-message .info-clickable {
+  cursor: pointer;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=notify.css.map */

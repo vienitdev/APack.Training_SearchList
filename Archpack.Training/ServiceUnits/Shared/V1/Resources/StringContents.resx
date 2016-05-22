@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Action" xml:space="preserve">
+    <value>アクション</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>新規登録</value>
+  </data>
+  <data name="AddItem" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="Basic" xml:space="preserve">
+    <value>基本情報</value>
+  </data>
+  <data name="BusinessUnit" xml:space="preserve">
+    <value>部署</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="CancelApplication" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="Colon" xml:space="preserve">
+    <value>：</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>確認</value>
+  </data>
+  <data name="DataCount" xml:space="preserve">
+    <value>件を表示</value>
+  </data>
+  <data name="DataTotalCount" xml:space="preserve">
+    <value>件中</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="DeleteItem" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>名</value>
+  </data>
+  <data name="FirstNamePhonetic" xml:space="preserve">
+    <value>フリガナ（名）</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="LastNamePhonetic" xml:space="preserve">
+    <value>フリガナ（姓）</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>ログアウト</value>
+  </data>
+  <data name="Mail" xml:space="preserve">
+    <value>電子メール</value>
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="NextSearch" xml:space="preserve">
+    <value>次を検索</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>役職</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>プロファイル情報</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>ロール名</value>
+  </data>
+  <data name="RoleSearchListInput" xml:space="preserve">
+    <value>ロール検索</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="SearchCriteria" xml:space="preserve">
+    <value>検索条件</value>
+  </data>
+  <data name="SelectItem" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>サービス</value>
+  </data>
+  <data name="SystemError" xml:space="preserve">
+    <value>システムエラー</value>
+  </data>
+  <data name="Tel" xml:space="preserve">
+    <value>電話番号</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>ユーザーID</value>
+  </data>
+  <data name="UserInput" xml:space="preserve">
+    <value>ユーザー編集</value>
+  </data>
+  <data name="UserInRoles" xml:space="preserve">
+    <value>ユーザー所属ロール</value>
+  </data>
+  <data name="UserList" xml:space="preserve">
+    <value>ユーザー一覧</value>
+  </data>
+  <data name="UserManagement" xml:space="preserve">
+    <value>所属ユーザー</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>ユーザー名</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>ユーザー情報</value>
+  </data>
+  <data name="UserSearchList" xml:space="preserve">
+    <value>ユーザー検索</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>説明</value>
+  </data>
+  <data name="RoleHeaderDetail" xml:space="preserve">
+    <value>ロール所属ユーザー編集</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>ロール情報</value>
+  </data>
+  <data name="RolesInUsers" xml:space="preserve">
+    <value>ロール所属ユーザー</value>
+  </data>
+  <data name="SearchResultList" xml:space="preserve">
+    <value>結果一覧</value>
+  </data>
+  <data name="DefaultPage" xml:space="preserve">
+    <value>トップページ</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>パスワードの確認</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>変更</value>
+  </data>
+  <data name="ResetPassword" xml:space="preserve">
+    <value>パスワード変更</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>担当者</value>
+  </data>
+  <data name="TargetMonth" xml:space="preserve">
+    <value>対象月</value>
+  </data>
+  <data name="AchieveCount" xml:space="preserve">
+    <value>達成数</value>
+  </data>
+  <data name="AchieveRate" xml:space="preserve">
+    <value>達成率</value>
+  </data>
+  <data name="Detail" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="MonthlyGoal" xml:space="preserve">
+    <value>月間目標</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>プロジェクト名</value>
+  </data>
+  <data name="TargetAchieve" xml:space="preserve">
+    <value>目標達成数</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>作業週</value>
+  </data>
+  <data name="WeeklyGoal" xml:space="preserve">
+    <value>作業目標</value>
+  </data>
+  <data name="WeeklyResult" xml:space="preserve">
+    <value>作業実績</value>
+  </data>
+  <data name="ActualManHour" xml:space="preserve">
+    <value>実績工数</value>
+  </data>
+  <data name="CategoryName" xml:space="preserve">
+    <value>カテゴリ名</value>
+  </data>
+  <data name="DiffHours" xml:space="preserve">
+    <value>差分</value>
+  </data>
+  <data name="ExecutionDate" xml:space="preserve">
+    <value>実施日</value>
+  </data>
+  <data name="PlanManHour" xml:space="preserve">
+    <value>予定工数</value>
+  </data>
+  <data name="PlanTask" xml:space="preserve">
+    <value>予定タスク</value>
+  </data>
+  <data name="PlanWeek" xml:space="preserve">
+    <value>予定週</value>
+  </data>
+  <data name="SubCategoryName" xml:space="preserve">
+    <value>サブカテゴリ名</value>
+  </data>
+  <data name="TaskName" xml:space="preserve">
+    <value>タスク名</value>
+  </data>
+  <data name="BillingFileName" xml:space="preserve">
+    <value>請求書.xls</value>
+  </data>
+  <data name="BillingTemplateFileName" xml:space="preserve">
+    <value>BillingTemplate.xls</value>
+  </data>
+  <data name="SalesExcelTemplateUrl" xml:space="preserve">
+    <value>~/Apps/Sales/proto/FileTemplates</value>
+  </data>
+  <data name="NextMonthAfterPayment" xml:space="preserve">
+    <value>翌々月末日払い</value>
+  </data>
+  <data name="NextMonthPayment" xml:space="preserve">
+    <value>翌月末日払い</value>
+  </data>
+  <data name="OtherPayment" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="TransmittalTemplateFileName" xml:space="preserve">
+    <value>TransmittalTemplate.xls</value>
+  </data>
+  <data name="TransmittalFileName" xml:space="preserve">
+    <value>送付状.xls</value>
+  </data>
+  <data name="DeliveryFileName" xml:space="preserve">
+    <value>納品書.xls</value>
+  </data>
+  <data name="DeliveryTemplateFileName" xml:space="preserve">
+    <value>DeliveryTemplate.xls</value>
+  </data>
+  <data name="StaffSearch" xml:space="preserve">
+    <value>候補者検索</value>
+  </data>
+  <data name="StaffManagement" xml:space="preserve">
+    <value>候補者管理</value>
+  </data>
+  <data name="ProcessManagement" xml:space="preserve">
+    <value>案件管理</value>
+  </data>
+  <data name="ProcessSearch" xml:space="preserve">
+    <value>案件検索</value>
+  </data>
+  <data name="InternalServerErrorMessage" xml:space="preserve">
+    <value>サーバーで予期しないシステムエラーが発生しました</value>
+  </data>
+  <data name="InternalServerErrorNavigationMessage" xml:space="preserve">
+    <value>ホームへ</value>
+  </data>
+  <data name="InternalServerErrorTitle" xml:space="preserve">
+    <value>システムエラーが発生しました</value>
+  </data>
+  <data name="NotFoundErrorMessage" xml:space="preserve">
+    <value>指定されたページはありません。</value>
+  </data>
+  <data name="NotFoundErrorNavigationMessage" xml:space="preserve">
+    <value>自動的にページが切り替わらない場合にはこのリンクをクリックしてください</value>
+  </data>
+  <data name="NotFoundErrorTitle" xml:space="preserve">
+    <value>指定されたページはありません。</value>
+  </data>
+  <data name="UnauthorizedErrorMessage" xml:space="preserve">
+    <value>指定されたページを利用する権限がありません。</value>
+  </data>
+  <data name="UnauthorizedErrorNavigationMessage" xml:space="preserve">
+    <value>自動的にページが切り替わらない場合にはこのリンクをクリックしてください</value>
+  </data>
+  <data name="UnauthorizedErrorTitle" xml:space="preserve">
+    <value>ページを利用する権限がありません</value>
+  </data>
+  <data name="DownloadStartMessage" xml:space="preserve">
+    <value>ファイルダウンロードを開始しました</value>
+  </data>
+  <data name="FIleDownloadMessage" xml:space="preserve">
+    <value>ファイルダウンロードが完了しましたら、この画面を閉じてください</value>
+  </data>
+  <data name="FileDownloadTitle" xml:space="preserve">
+    <value>ファイルダウンロードの準備を行っています。</value>
+  </data>
+</root>

@@ -1,0 +1,28 @@
+{
+    "name": "Please_edit_application_name",
+    "version": "1.0.0",
+    "authors": [ ],
+    "description": "Please edit description here.",
+    "moduleType": [
+        "globals"
+    ],
+    "ignoreDependencies": {
+        "jQuery": true
+    },
+    "dependencies": {
+        "ArchPackJs": "git+https://archwaydev.visualstudio.com/DefaultCollection/_git/ArchPack.Js",
+        "jquery": "~1.11.3",
+        "bootstrap": "~3.3.4",
+        "bootstrap-datepicker": "~1.4.0",
+        "json3": "~3.3.2",
+        "respond": "~1.4.2",
+        "jasmine": "~2.3.4",
+        "jasmine-jquery": "~2.1.1",
+        "blanket": "git+https://github.com/alex-seville/blanket.git#~1.1.7",
+        "jquery.inputmask": "~3.1.63"
+    },
+  "resolutions": {
+    "jquery": "~1.11.3"
+  },
+  "private": true
+}

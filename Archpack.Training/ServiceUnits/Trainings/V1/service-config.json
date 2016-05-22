@@ -1,0 +1,30 @@
+﻿{
+    "name": "trainings",
+    "version": "0.0.1",
+    "unavailable": false,
+    "display": "トレーニング",
+    "menu": {
+      "hidden": true
+    },
+    "items": [
+    ],
+    "connectionStrings": {
+        "DefinitionsEntities": "data source=.\\SQLEXPRESS;initial catalog=Definitions;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"
+    },
+    "errorPages": {
+        "500": {
+            "redirectMode": "Rewrite",
+            "url": "~/ServiceUnits/Shared/V1/Anonymous/Pages/500.aspx"
+        },
+        "404": { 
+            "redirectMode": "Rewrite",
+            "url": "~/ServiceUnits/Shared/V1/Anonymous/Pages/404.aspx",
+            "redirectUrl": "~/Trainings/V1/Users/Page/SearchList"
+        },
+        "401": { 
+            "redirectMode": "Rewrite",
+            "url": "~/ServiceUnits/Shared/V1/Anonymous/Pages/401.aspx",
+            "redirectUrl": "~/Trainings/V1/Users/Page/SearchList"
+        }
+    }
+}

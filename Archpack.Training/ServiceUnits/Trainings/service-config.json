@@ -1,0 +1,10 @@
+{
+    "name": "trainings",
+    "unavailable": false,
+    "display": "メンバーシップ管理",
+    "menu": {
+      "hidden": true
+    },
+    "items": [
+    ]
+}

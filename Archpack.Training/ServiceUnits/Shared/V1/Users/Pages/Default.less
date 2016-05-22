@@ -1,0 +1,123 @@
+﻿@import "../../wwwroot/Content/variables.less";
+
+@height-global-header: 40px;
+@height-global-footer: 0px;
+@height-global-commands: 40px;
+
+//z-index
+@zindex-global-header: 101;
+@zindex-global-footer: 100;
+
+@side-bar-width: 360px;
+
+.default-radius() {
+    border-radius: 2px;
+}
+
+.default-drop-shadow() {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.element-drop-shadow() {
+    box-shadow: rgba(128, 128, 128, 0.5) 2px 2px 6px 3px;
+}
+
+#body {
+
+    .page-title {
+        position: relative;
+        left: 12px;
+        top: 3px;
+    }
+
+    .screen-header {
+        z-index: 1;
+    }
+
+    .screen-body {
+        top: 0; //@height-global-header;
+    }
+
+    .side-bar {
+        position: absolute;
+        top: @height-global-header;
+        left: 0;
+        bottom: 0;
+        width: @side-bar-width;
+        .element-drop-shadow();
+        z-index: 2;
+        background-color: darken(@base-color, 5%);
+
+        .side-bar-items {
+            width: 100%;
+
+            .side-bar-item {
+                font-size: 14px;
+                /*color: white;*/
+                padding: 12px;
+                border-bottom: solid 1px @base-color;
+
+                a {
+                    color: black;
+                }
+
+                &:hover {
+                    background-color: @base-color;
+                }
+            }
+        }
+    }
+
+    .card-content {
+        position: absolute;
+        top: @height-global-header;
+        left: @side-bar-width;
+        bottom: 0;
+        right: 0;
+        overflow: auto;
+        background-color: @base-color;
+
+        .card-commands {
+            background-color: white;
+            .default-drop-shadow();
+            height: 50px;
+
+            .commands {
+                text-align: right;
+                padding: @default-margin @default-double-margin;
+
+                .btn {
+                }
+            }
+
+            .add-card-button {
+                width: 36px;
+                height: 36px;
+                border-radius: 100%;
+            }
+        }
+    }
+
+    .datalist {
+        background-color: transparent;
+
+        .datalist-item {
+            .element-drop-shadow();
+
+            .btn.circle-btn {
+                width: 30px;
+                height: 30px;
+                float: right;
+            }
+        }
+
+        .row {
+            margin: 0;
+        }
+    }
+
+    .btn.circle-btn {
+        border-radius: 100%;
+        box-shadow: 1px 1px 1px 1px rgba(128,128,128,0.5);
+    }
+}

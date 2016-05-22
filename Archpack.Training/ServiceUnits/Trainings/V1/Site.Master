@@ -1,0 +1,210 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Archpack.Training.ServiceUnits.Trainings.V1.Site" %>
+
+<%@ Import Namespace="Archpack.Training.ServiceUnits.Trainings.V1.Resources" %>
+
+<!DOCTYPE html>
+
+<html lang="ja">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title></title>
+
+    <!-- CSS -->
+    <link media="all" rel="stylesheet" href="<%=ResolveUrl("./wwwroot/lib/bootstrap/css/bootstrap.css") %>" type="text/css" />
+    <link media="all" rel="stylesheet" href="<%=ResolveUrl("./wwwroot/lib/bootstrap-datepicker/css/bootstrap-datepicker.css") %>" type="text/css" />
+    <link media="all" rel="stylesheet" href="<%=ResolveUrl("./wwwroot/Content/site.css") %>" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="StyleIncludeContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="body">
+    <!-- ヘッダーのレイアウト -->
+    <div class="screen-header">
+        <div class="navbar navbar-inset navbar-fixed-top">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <span id="menu-toggle" class="screen-logo glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span><span class="screen-title page-title" data-prop="page-title"></span>
+                </div>
+            </div>
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li>
+                    <a class="btn btn-link">
+                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    </a>
+                </li>
+                <li>
+                    <div class="user-dropdown">
+                        <a class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <span class="user-id"><%=Page.User.Identity.Name %></span>
+                            <span class="user-name"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">
+                                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                    <%= StringContents.UserInfo %>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a role="menuitem" tabindex="-1" href="#">
+                                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                                    サインアウト
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="screen-commands">
+        <div class="commands-container">
+            <div class="row">                
+                <div class="col-xs-9 hidden-xs">
+                    <ol class="breadcrumb">
+                    </ol>
+                </div>
+                <div class="col-sm-3">
+                    <!--TODO: コマンドボタンを定義するHTMLをここに記述します。-->
+                    <asp:ContentPlaceHolder ID="FooterContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="screen-body">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <!-- フッターのレイアウト -->
+    <div class="screen-footer">
+        <div class="footer-container">
+            <!-- 通知／エラーメッセージの表示エリア -->
+            <div data-part-template="slideupmessage">
+                <div class="message-area slideup-area">
+                    <div class="alert-message" style="display: none">
+                        <ul></ul>
+                    </div>
+                    <div class="info-message" style="display: none">
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content">
+            </div>
+        </div>
+    </div>
+
+    <!-- ファイル添付用プレースフォルダ -->
+    <div id="files"></div>
+
+    <div id="dialog-container">
+        <!-- content dialog -->
+        <asp:ContentPlaceHolder ID="DialogsContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <!-- 確認ダイアログ-->
+        <div data-part-template="confirm">
+            <div class="modal fade confirm" id="confirm-dialog" data-backdrop="static">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="control-message-label col-xs-12">
+                                    <label class="item-label"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-sm btn-primary"></button>
+                            <button class="btn btn-sm btn-cancel" data-dismiss="modal"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- メニュー表示のコンテナー -->
+    <div class="menu-container" style="display: none;"></div>
+    <!-- JavaScript -->
+    <!--[if lt IE 9]>
+      <script src="<%=ResolveUrl("./wwwroot/lib/bootstrap/js/respond.js") %>" type="text/javascript"></script>
+    <![endif]-->
+
+    <script src="<%=ResolveUrl("./wwwroot/lib/jquery/jquery.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("./wwwroot/lib/bootstrap/js/bootstrap.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("./wwwroot/lib/bootstrap-datepicker/js/bootstrap-datepicker.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("./wwwroot/lib/ArchPackJs/js/app.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("./wwwroot/lib/ArchPackJs/js/app.ui.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("./wwwroot/lib/ArchPackJs/js/datatable.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("./wwwroot/Scripts/portalmenu.js") %>" type="text/javascript"></script>
+    <!-- TODO: 言語ごとのリソースファイルの読み込み -->
+    <script src="<%=ResolveUrl("~/Trainings/V1/resource/StringContents?c=" + System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName) %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("~/Trainings/V1/resource/Messages?c=" + System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName) %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("./Resources/settings.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("./Resources/settings.base.js") %>" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        App.culture.current("<%= System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName %>");
+
+        //バリデーションのデフォルトメッセージの設定
+        (function () {
+            var key, lowwer,
+                messages = App.str.text("Messages");
+            for (key in messages) {
+                lowwer = key.toLowerCase();
+                if (messages.hasOwnProperty(key) && App.validation.hasMethod(lowwer)) {
+                    App.validation.setMessage(lowwer, messages[key]);
+                }
+            }
+        })();
+
+        //アプリケーションルートパスの設定
+        ; (function () {
+            var base = App.define("App.settings.base");
+            base.applicationRootUrl = "<%=ResolveUrl("~/") %>";
+        }());
+
+        $(document).ready(function () {
+            $.ajaxSetup({ cache: false });
+
+            // メニューの操作
+            $("#menu-toggle").on("click", function () {
+                var $menu = $(".menu-container");
+
+                $menu.toggle();
+                if ($menu.is(":visible")) {
+                    document.body.style.overflow = "hidden";
+                } else {
+                    document.body.style.overflow = "auto";
+
+                }
+            });
+
+            //$.ajax(App.ajax.webapi.get("/Menu/V1/Users/api/MenuItems", {}, { async: false }))
+            //.then(function (result) {
+            //    var setting =
+            //        {
+            //            setting: result.items
+            //        };
+            //    App.ui.portalmenu.setup([], ".menu-container", App.settings.base.applicationRootUrl, setting);
+            //    App.ui.breadcrumb.setup([], ".breadcrumb", App.settings.base.applicationRootUrl, setting);
+            //});
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="ScriptIncrudeContent" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿{
+  "authProviders": [
+    "db",
+    "ad"
+  ],
+  "connectionStrings": {
+    "Authorization": {
+        "connectionString": "DATA SOURCE=arcsdb.archway.co.jp:1521/arcsdb;PASSWORD=archway;USER ID=ARCSADM_UT",
+        "providerName": "Oracle.ManagedDataAccess.Client",
+        "defaultScheme": "ARCSADM_UT"
+    },
+    "EmployeeInformationEntities": {
+      "connectionString": "DATA SOURCE=arcsdb.archway.co.jp:1521/arcsdb;PASSWORD=archway;USER ID=ARCSADM_UT",
+      "providerName": "Oracle.ManagedDataAccess.Client",
+      "defaultScheme": "ARCSADM_UT"
+    },
+    "ArcsAuditLogEntities": {
+      "connectionString": "DATA SOURCE=arcsdb.archway.co.jp:1521/arcsdb;PASSWORD=archway;USER ID=ARCSADM_UT",
+      "providerName": "Oracle.ManagedDataAccess.Client",
+      "defaultScheme": "ARCSADM_UT"
+    }
+  }
+}

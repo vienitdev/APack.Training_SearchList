@@ -1,0 +1,653 @@
+﻿@import './reset.less';
+@import "./variables.less";
+@import './reset.less';
+@import "../lib/ArchPackJs/css/loading";
+@import "../lib/ArchPackJs/css/datatable";
+
+@height-global-header: 40px;
+@height-global-footer: 0px;
+@height-global-commands: 45px;
+
+//z-index
+@zindex-global-header: 101;
+@zindex-global-footer: 100;
+
+.default-radius() {
+    border-radius: 2px;
+}
+
+.default-drop-shadow() {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+html {
+    font-size: @font-size-base;
+}
+
+html, body {
+    height: 100%;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.screen-header {
+    height: @height-global-header;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: @zindex-global-header;
+    .default-drop-shadow();
+    background-color: @key-color;
+    color: white; //TODO: 変数化
+    .global-menu-opner {
+        color: @key-color;
+    }
+
+    .navbar-brand {
+        padding: 0px;
+    }
+
+    .screen-logo {
+        font-size: 19px;
+        display: inline-block;
+        padding: 10px 15px 10px 15px;
+
+        &:hover {
+            background-color: lighten(@key-color, 10%);
+        }
+    }
+
+    .screen-title {
+        position: relative;
+        display: inline-block;
+        padding: 10px 15px 10px 5px;
+        top: @default-half-margin * -1;
+
+        &:hover {
+            background-color: lighten(@key-color, 10%);
+        }
+    }
+}
+
+.commands {
+    text-align: right;
+}
+
+.screen-commands {
+    position: absolute;
+    top: @height-global-header;
+    left: 0;
+    right: 0;
+    //padding: @default-margin @default-double-margin @default-margin @default-double-margin;
+    .commands-container {
+        /*margin-top: @default-margin;
+        margin-left: @default-double-margin;
+        margin-right: @default-double-margin;
+        .default-radius();*/
+        background-color: @clear-color;
+
+        .row {
+            margin-right: 0px;
+        }
+
+        .breadcrumb {
+            margin-bottom: @default-half-margin;
+        }
+
+        .breadcrumb > li + li::before {
+            content: ">";
+        }
+
+        padding: @default-half-margin @default-double-margin 1px @default-margin;
+
+        .commands {
+            margin-right: -15px;
+        }
+
+        .btn-sm {
+            min-width: 65px;
+        }
+    }
+}
+
+.screen-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: @zindex-global-footer;
+
+    .footer-container {
+        background-color: @clear-color;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    }
+
+    .footer-content {
+        height: @height-global-footer;
+        position: relative;
+
+        .commands {
+            position: absolute;
+            right: @default-double-margin;
+            height: @height-global-footer;
+            line-height: @height-global-footer;
+            margin-right: @default-double-margin;
+        }
+    }
+}
+
+.screen-body {
+    position: absolute;
+    top: @height-global-header + @height-global-commands;
+    bottom: @height-global-footer;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    padding: @default-double-margin;
+
+    .detail {
+        .detail-command {
+            text-align: center;
+        }
+    }
+}
+
+.menu-container {
+  position: fixed;
+  top: @height-global-header;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: @base-color;
+  z-index: 9000;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .portalmenu-container{
+      margin: @default-double-margin;
+  }
+}
+
+//button
+button, input[type="button"], input[type="submit"], input[type="cancel"], a[href], .btn {
+    cursor: pointer;
+}
+
+.btn {
+    .default-radius();
+    .default-drop-shadow();
+}
+
+.btn.btn-link {
+    box-shadow: none;
+}
+
+.panel {
+    .default-drop-shadow();
+    .default-radius();
+    border: 0;
+    margin-bottom: @default-double-margin;
+    /*
+    &.panel-default{
+        border-top: 3px solid @key-color;
+    }
+    &.panel-primary{
+        border-top: 3px solid @key-color;
+    }
+    &.panel-danger{
+        border-top: 3px solid @brand-danger;
+    }
+    &.panel-info{
+        border-top: 3px solid @brand-info;
+    }
+    &.panel-warning{
+        border-top: 3px solid @brand-warning;
+    }
+    &.panel-success{
+        border-top: 3px solid @brand-success;
+    }
+    */
+    > .panel-heading {
+        //background-color: #dddddd;
+        border-bottom: solid 1px #cccccc;
+    }
+
+    > .panel-heading[data-toggle] {
+        cursor: pointer;
+
+        .glyphicon {
+            color: @gray-light;
+        }
+
+        &:hover {
+            background-color: #e3e3e3;
+        }
+    }
+}
+
+.modal {
+    .modal-content {
+        .default-radius();
+        .default-drop-shadow();
+    }
+
+    .modal-header {
+        padding-bottom: @default-margin;
+        padding-top: @default-margin;
+        border-bottom: solid 1px #cccccc;
+    }
+
+    .modal-body {
+        padding-bottom: @default-margin;
+        padding-top: @default-margin;
+        background-color: @base-color;
+    }
+
+    .modal-footer {
+        padding-bottom: @default-margin;
+        padding-top: @default-margin;
+    }
+}
+
+.navbar-right {
+    margin-right: @default-margin;
+}
+
+.navbar-nav.nav {
+    a.btn.btn-link {
+        height: @height-global-header;
+        color: @clear-color;
+
+        &:hover,
+        &:focus {
+            background-color: lighten(@key-color, 10%);
+            border-color: lighten(@key-color, 10%);
+        }
+    }
+
+    .open > a {
+        &,
+        &:hover,
+        &:focus {
+            background-color: darken(@key-color, 10%);
+            border-color: darken(@key-color, 10%);
+        }
+    }
+}
+
+.breadcrumb {
+    background-color: @clear-color;
+    margin-top: 0px;
+    margin-bottom: @default-double-margin;
+    padding-top: @default-half-margin;
+    padding-bottom: @default-half-margin;
+}
+
+@import "./variables.less";
+
+body {
+}
+
+/*-----------------------------------------------------------------------------
+    Input controll style definitions.
+-----------------------------------------------------------------------------*/
+
+input[type="text"], input[type="password"], select, textarea {
+    border: 1px solid @input-border;
+    margin: 2px;
+    padding: 2px;
+    display: inline-block;
+    border-radius: @border-radius-base;
+    width: 100%;
+    margin-right: -15px;
+    ime-mode: inactive;
+
+    &:focus {
+        @color-rgba: rgba(red(@key-color), green(@key-color), blue(@key-color), .6);
+        border-color: @key-color;
+        box-shadow: ~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 4px @{color-rgba}";
+    }
+}
+
+
+input[type="text"].error, input[type="password"].error, select.error, textarea.error {
+    border-color: @brand-danger;
+
+    &:focus {
+
+        @color-rgba: rgba(red(@brand-danger), green(@brand-danger), blue(@brand-danger), .6);
+        border-color: @brand-danger;
+        box-shadow: ~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 4px @{color-rgba}";
+    }
+}
+
+input[type="text"].ime-active, select.ime-active, textarea.ime-active {
+    ime-mode: active;
+}
+
+
+/*-----------------------------------------------------------------------------
+    form styel definitions.
+-----------------------------------------------------------------------------*/
+.row {
+    .control-label {
+        font-weight: bold;
+        text-align: right;
+
+        label {
+            display: inline-block;
+        }
+    }
+
+    margin-bottom: @default-margin;
+}
+
+@media (max-width: @screen-xs-max) {
+    .row {
+        .control-label {
+            text-align: left;
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------------
+    list (panel) styel definitions.
+-----------------------------------------------------------------------------*/
+.default-drop-shadow() {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.datalist {
+    width: 100%;
+    background-color: @gray-lighter;
+    padding-top: @default-margin;
+    padding-bottom: @default-margin;
+
+    .datalist-item {
+        .default-drop-shadow();
+        background-color: @panel-bg;
+        border-radius: @border-radius-base;
+        margin: @default-double-margin 0px @default-double-margin 0px;
+        padding: @default-double-margin;
+    }
+
+    .row {
+        margin: 0px;
+    }
+}
+
+
+/*-----------------------------------------------------------------------------
+    list (table) styel definitions.
+-----------------------------------------------------------------------------*/
+@datatable-bg: @table-bg;
+@datatable-error-bg: lighten(@brand-danger, 40%);
+@datatable-bg-accent: lighten(@key-color, 65%);
+@datatable-bg-hover: lighten(@key-color, 55%);
+@datatable-header-bg: lighten(@gray-base, 97.5%);
+@datatable-header-text-color: @text-color;
+@datatable-body-text-color: @text-color;
+@datatable-border-color: lighten(@table-border-color, 15%);
+@datatable-border: 2px solid @datatable-border-color;
+@datatable-unselected-bg: lighten(@key-color, 60%);
+@datatable-selected-bg: lighten(@key-color, 10%);
+@line-height: 16px;
+
+.dt-container .fix-container table.datatable {
+    border-right: 3px solid @datatable-border-color;
+}
+
+table.datatable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-right: 1px;
+    max-width: 2000px;
+    line-height: @line-height;
+
+    th, td {
+        border-collapse: collapse;
+        vertical-align: middle;
+        padding: 3px 3px 3px 3px;
+    }
+
+    th {
+        border: @datatable-border;
+        background-color: @datatable-header-bg;
+        color: @datatable-header-text-color;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 4px;
+        padding-bottom: 4px;
+
+        i {
+            margin-left: 5px;
+            z-index: 100;
+        }
+    }
+
+
+    td {
+        border: @datatable-border;
+        color: @datatable-body-text-color;
+
+        button {
+            padding: 0 2px 0 2px;
+            min-width: 0;
+        }
+
+        label {
+            min-width: 0;
+        }
+
+        input[type="checkbox"] {
+            vertical-align: middle;
+        }
+    }
+
+    tbody:nth-child(even) {
+        background-color: @datatable-bg-accent;
+
+        &:hover {
+            background-color: @datatable-bg-hover;
+        }
+    }
+
+    td.center {
+        text-align: center;
+    }
+
+    tbody.has-error td {
+        background-color: @datatable-error-bg !important;
+    }
+
+    tbody {
+        background-color: @datatable-bg;
+
+        &:hover {
+            background-color: @datatable-bg-hover;
+            cursor: pointer;
+        }
+
+        min-height: 32px;
+    }
+
+    tbody.selected {
+        background-color: @datatable-bg-hover;
+    }
+
+    tfoot {
+        background-color: @datatable-bg;
+    }
+
+    input[type="text"], input[type="password"], select, textarea {
+        margin: 0px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    button {
+        margin: 0px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .select-tab {
+        border-left-width: 7px;
+        border-left-style: solid;
+        border-left-color: @datatable-unselected-bg;
+        min-width: 0px;
+        display: block;
+        height: 24px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+
+        &.select-tab-2lines {
+            height: 55px;
+        }
+    }
+
+    .selected {
+        border-left-color: @datatable-selected-bg;
+    }
+}
+
+.edit-menu {
+    background-color: @gray-light;
+    border-radius: 20px;
+    padding: 0px;
+    height: 24px;
+    width: 24px;
+    padding-top: 2px;
+    color:#ffffff;
+    margin-right: @default-margin;
+
+    &:hover {
+        background-color: @gray;
+        color:#ffffff;
+    }
+}
+
+/*-----------------------------------------------------------------------------
+    データテーブルのカレンダー表示のクラス定義
+-----------------------------------------------------------------------------*/
+@table-saturday-color: #cdcdfe;
+@table-sunday-color: #ffd6d6;
+
+table.datatable {
+
+    tbody .date-col, tbody.date-row {
+
+        &.sat {
+            background-color: @table-saturday-color;
+
+            input[type=text], select {
+                border-color: darken(@table-saturday-color, 5);
+                background-color: lighten(@table-saturday-color, 9);
+            }
+        }
+
+        &.sun {
+            background-color: @table-sunday-color;
+
+            input[type=text], select {
+                border-color: darken(@table-sunday-color, 5);
+                background-color: lighten(@table-sunday-color, 7);
+            }
+        }
+    }
+}
+
+/*-----------------------------------------------------------------------------
+    notify style definitions
+-----------------------------------------------------------------------------*/
+.message-area {
+    margin-left: auto;
+    margin-right: auto;
+
+    span {
+        float: left;
+        margin: 8px;
+    }
+
+    .notify-title-holder {
+        height: 25px;
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+    .notify-title-message-length {
+        margin-right: 5px;
+    }
+
+    .notify-title-open, .notify-title-close {
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: -5px;
+    }
+
+    .notify-message(@primary-color, @bg-color) {
+        color: @primary-color;
+        background-color: @bg-color;
+        border-top: 2px solid @primary-color;
+        max-height: 200px;
+        overflow: auto;
+
+        .badge {
+            background-color: @primary-color - 10;
+        }
+
+        ul {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+
+            pre {
+                background-color: @clear-color;
+                color: @primary-color;
+                font-family: @font-family-base;
+                display: block;
+                padding: 4px;
+                padding-left: 40px;
+                text-decoration: underline;
+                border-left: @default-margin solid @primary-color;
+                border-radius: 0px;
+                margin-bottom: @default-half-margin;
+            }
+
+            pre:hover {
+                background-color: @bg-color;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .alert-message {
+        .notify-message(@brand-danger, lighten(@brand-danger, 40%));
+
+        .alert-clickable {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    .info-message {
+        .notify-message(@brand-info, lighten(@brand-info, 40%));
+
+        .info-clickable {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}

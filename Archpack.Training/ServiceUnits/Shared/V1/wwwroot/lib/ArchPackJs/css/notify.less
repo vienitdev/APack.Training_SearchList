@@ -1,0 +1,83 @@
+@import './constants.less';
+
+/*-----------------------------------------------------------------------------
+    メッセージ表示領域のクラス定義
+-----------------------------------------------------------------------------*/
+.message-area {
+
+    margin-left: auto;
+    margin-right: auto;
+
+    span {
+        float: left;
+        margin: 8px;
+    }
+
+    .notify-title-holder {
+        height: 25px;
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+    .notify-title-message-length {
+        margin-right: 5px;
+    }
+
+    .notify-title-open, .notify-title-close {
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: -5px;
+    }
+
+    .notify-message(@primary-color, @bg-color) {
+        color: @primary-color;
+        background-color: @bg-color;
+        border-top: 2px solid @primary-color;
+        max-height: 200px;
+        overflow: auto;
+
+        .badge {
+            background-color: @primary-color - 10;
+        }
+
+        ul {
+            margin: 0;
+            list-style: none;
+            padding: 0;
+
+            pre {
+                background-color: @default-bg-color;
+                font-family: @default-font-family;
+                color: @primary-color;
+                display: block;
+                padding: 4px;
+                padding-left: 40px;
+                text-decoration: underline;
+            }
+
+            pre:hover {
+                background-color: @bg-color;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .alert-message {
+        .notify-message(@error-primary-color, @error-bg-color);
+
+        .alert-clickable{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    .info-message {
+        .notify-message(@info-primary-color, @info-bg-color);
+
+        .info-clickable{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}

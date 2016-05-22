@@ -1,0 +1,85 @@
+﻿body {
+    .list-menu-item-box {
+        margin: 12px;
+        margin-bottom: 24px;
+        .list-menu-item-box-toggle {
+            display: none;
+
+            &:checked ~ .list-menu-items {
+                -moz-transition: max-height .5s ease-in;
+                -o-transition: max-height .5s ease-in;
+                -webkit-transition: max-height .5s ease-in;
+                transition: max-height .5s ease-in;
+                max-height: 500px;
+                overflow-x: auto;
+            }
+
+            &:not(:checked) ~ .list-menu-items {
+                max-height: 0;
+                overflow: hidden;
+                overflow-x: hidden;
+                -moz-transition: max-height .25s ease-out;
+                -o-transition: max-height .25s ease-out;
+                -webkit-transition: max-height .25s ease-out;
+                transition: max-height .25s ease-out;
+            }
+
+            &:checked ~ .list-menu-item-box-title::after {
+                
+                content: "\e113";
+                font-family: 'Glyphicons Halflings';
+                display: inline-block;
+                float: right;
+                font-size: .8em;
+                font-weight:lighter;
+            }
+            &:not(:checked) ~ .list-menu-item-box-title::after {
+                content: "\e114";
+                font-family: 'Glyphicons Halflings';
+                display: inline-block;
+                float: right;
+                font-size: .8em;
+                font-weight:lighter;
+            }
+        }
+
+        .list-menu-item-box-title {
+            display: block;
+            font-size: 1.4em;
+            font-weight: normal;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #999999;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            cursor: pointer;
+
+            &:hover{
+                border-bottom: 1px solid #101177;
+                color: #101177;
+            }
+        }
+
+        .list-menu-items {
+            margin-top: 6px;
+
+            .list-menu-item-link {
+                font-size: 1.2em;
+                display: block;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -webkit-user-select: none;
+                user-select: none;
+                padding: 3px 6px 3px 6px;
+                text-decoration: none;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: #101177;
+                    color: white;
+                }
+            }
+        }
+    }
+}

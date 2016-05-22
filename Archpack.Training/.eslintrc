@@ -1,0 +1,16 @@
+{
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "indent": [2, 4, {
+            "SwitchCase": 1
+        }],
+        "quotes": [2, "double"],
+        "semi": [2, "always"],
+        "strict": 2,
+        "consistent-return": 0,
+        "no-underscore-dangle": 0,
+        "no-extra-boolean-cast": 0
+    }
+}

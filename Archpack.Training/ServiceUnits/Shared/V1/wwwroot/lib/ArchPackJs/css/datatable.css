@@ -1,0 +1,165 @@
+﻿/*-----------------------------------------------------------------------------
+    テーマ変数定義
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+    データテーブルのスタイル定義
+-----------------------------------------------------------------------------*/
+/* TODO: .dt-container .dt-fix-container table.datatable に変更予定*/
+.dt-container .fix-container table.datatable {
+  border-right: 3px solid #cccccc;
+}
+table.datatable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-right: 1px;
+  max-width: 2000px;
+  line-height: 16px;
+}
+table.datatable th,
+table.datatable td {
+  border-collapse: collapse;
+  vertical-align: middle;
+  padding: 2px;
+}
+table.datatable th {
+  border: 1px solid #cccccc;
+  background-color: #777777;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+table.datatable th i {
+  margin-left: 5px;
+}
+table.datatable td {
+  border: 1px solid #cccccc;
+  color: #333333;
+}
+table.datatable td button {
+  padding: 0 2px 0 2px;
+  min-width: 0;
+}
+table.datatable td label {
+  min-width: 0;
+}
+table.datatable td input[type="checkbox"] {
+  vertical-align: middle;
+}
+table.datatable tbody:nth-child(even) td {
+  background-color: #fafafa;
+}
+table.datatable td.center {
+  text-align: center;
+}
+table.datatable tbody.has-error td {
+  background-color: #fff7f7 !important;
+}
+table.datatable tbody {
+  background-color: #ffffff;
+}
+table.datatable tfoot {
+  background-color: #ffffff;
+}
+table.datatable input[type="text"],
+table.datatable input[type="password"],
+table.datatable select,
+table.datatable textarea {
+  margin: 0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
+table.datatable button {
+  margin: 0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+table.datatable .select-tab {
+  border-left-width: 7px;
+  border-left-style: solid;
+  border-left-color: #efefef;
+  min-width: 0px;
+  display: block;
+  height: 24px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+table.datatable .select-tab.select-tab-2lines {
+  height: 55px;
+}
+table.datatable .selected {
+  border-left-color: #666666;
+}
+/*-----------------------------------------------------------------------------
+    データテーブルのカレンダー表示のクラス定義
+-----------------------------------------------------------------------------*/
+table.datatable tbody .date-col.sat,
+table.datatable tbody.date-row.sat {
+  background-color: #cdcdfe;
+}
+table.datatable tbody .date-col.sat input[type=text],
+table.datatable tbody.date-row.sat input[type=text],
+table.datatable tbody .date-col.sat select,
+table.datatable tbody.date-row.sat select {
+  border-color: #b4b4fe;
+  background-color: #fafaff;
+}
+table.datatable tbody .date-col.sun,
+table.datatable tbody.date-row.sun {
+  background-color: #ffd6d6;
+}
+table.datatable tbody .date-col.sun input[type=text],
+table.datatable tbody.date-row.sun input[type=text],
+table.datatable tbody .date-col.sun select,
+table.datatable tbody.date-row.sun select {
+  border-color: #ffbdbd;
+  background-color: #fffafa;
+}
+.dt-container {
+  position: relative;
+  overflow-x: auto;
+}
+.dt-container .fix-columns {
+  position: absolute;
+  z-index: 10;
+}
+.dt-container .fix-columns table.datatable {
+  margin-right: 0px;
+}
+.dt-container .dt-head {
+  overflow-x: hidden;
+}
+.dt-container .dt-body {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: scroll;
+  top: 0;
+}
+.dt-container .dt-body thead th,
+.dt-container .dt-body thead td {
+  height: 0 !important;
+  padding: 0 !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+.dt-container .dt-body.dt-fix-body {
+  margin-top: 0px;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+}
+.dt-container .dt-foot {
+  overflow-x: hidden;
+}
+.dt-container .wait {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  top: 0px;
+  left: 0px;
+}
+/*# sourceMappingURL=datatable.css.map */

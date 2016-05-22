@@ -1,0 +1,42 @@
+﻿[
+  {
+    "outputFile": "ServiceUnits/Actos/V1/wwwroot/Content/app.css",
+    "inputFile": "ServiceUnits/Actos/V1/wwwroot/Content/app.less"
+  },
+  {
+    "outputFile": "ServiceUnits/Actos/V1/wwwroot/lib/ArchPackJs/css/datatable.css",
+    "inputFile": "ServiceUnits/Actos/V1/wwwroot/lib/ArchPackJs/css/datatable.less"
+  },
+  {
+    "outputFile": "ServiceUnits/Actos/V1/wwwroot/Content/site.css",
+    "inputFile": "ServiceUnits/Actos/V1/wwwroot/Content/site.less"
+  },
+  {
+    "outputFile": "ServiceUnits/Actos/V1/Users/Pages/Top.css",
+    "inputFile": "ServiceUnits/Actos/V1/Users/Pages/Top.less"
+  },
+  {
+    "outputFile": "ServiceUnits/Actos/V1/Users/Pages/ApportionSearch.css",
+    "inputFile": "ServiceUnits/Actos/V1/Users/Pages/ApportionSearch.less"
+  },
+  {
+    "outputFile": "ServiceUnits/Actos/V1/wwwroot/Content/bootstrap.override.css",
+    "inputFile": "ServiceUnits/Actos/V1/wwwroot/Content/bootstrap.override.less"
+  },
+  {
+    "outputFile": "ServiceUnits/Actos/V1/Users/Pages/StaffSearch.css",
+    "inputFile": "ServiceUnits/Actos/V1/Users/Pages/StaffSearch.less"
+  },
+  {
+    "outputFile": "ServiceUnits/Actos/V1/Users/Pages/CounselingScheduleSearchList.css",
+    "inputFile": "ServiceUnits/Actos/V1/Users/Pages/CounselingScheduleSearchList.less"
+  },
+  {
+    "outputFile": "ServiceUnits/Actos/V1/Users/Pages/PryRequest.css",
+    "inputFile": "ServiceUnits/Actos/V1/Users/Pages/PryRequest.less"
+  },
+  {
+    "outputFile": "ServiceUnits/Actos/V1/Users/Pages/ConfirmedInfoRegistration.css",
+    "inputFile": "ServiceUnits/Actos/V1/Users/Pages/ConfirmedInfoRegistration.less"
+  }
+]
